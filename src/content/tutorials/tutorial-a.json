@@ -1,0 +1,3360 @@
+{
+  "id": "tutorial-a",
+  "title": "Tutorial A",
+  "shortDescriptionUk": "Перший маршрут за структурою реального іспиту",
+  "localeBase": "cs",
+  "supportLocale": "uk",
+  "taskCount": 16,
+  "seedTaskCount": 16,
+  "tasks": [
+    {
+      "id": "tutorial-a-task-1",
+      "taskNumber": 1,
+      "titleCs": "Kolikrát je součet větší",
+      "titleUk": "У скільки разів більша сума",
+      "examStyleGroup": "arithmetic_ratio",
+      "difficulty": 1,
+      "available": true,
+      "skills": ["arithmetic_basic", "ratio_language"],
+      "errorTags": ["misreads_ratio_language", "confuses_more_by_vs_more_times"],
+      "intro": {
+        "typeLabelUk": "Це задача на базові обчислення і відношення.",
+        "whyUk": "Тут важливо не просто порахувати числа, а правильно зрозуміти фразу «у скільки разів».",
+        "tipUk": "Спочатку знайди дві готові величини, а вже потім порівнюй їх."
+      },
+      "promptSegments": [
+        {
+          "id": "t1-s1",
+          "cs": "Určete, kolikrát je součet čísel 16 a 4 větší než druhá odmocnina z jejich součinu.",
+          "uk": "Визнач, у скільки разів сума чисел 16 і 4 більша за квадратний корінь з їхнього добутку."
+        }
+      ],
+      "fullTranslationUk": "Знайди суму 16 і 4. Потім знайди квадратний корінь із добутку 16 і 4. Після цього визнач, у скільки разів перше число більше за друге.",
+      "finalSummaryUk": "«У скільки разів більше» означає поділити одну вже знайдену величину на іншу.",
+      "steps": [
+        {
+          "id": "tutorial-a-task-1-step-1",
+          "prompt": {
+            "cs": "Co máme určit nejdřív?",
+            "uk": "Що треба знайти спочатку?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "Součet 16 a 4 a odmocninu ze součinu 16 a 4",
+              "uk": "Суму 16 і 4 та корінь із добутку 16 і 4",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так, спочатку треба отримати дві величини, які потім будемо порівнювати."
+            },
+            {
+              "id": "b",
+              "cs": "Rozdíl 16 a 4",
+              "uk": "Різницю 16 і 4",
+              "isCorrect": false,
+              "errorTag": "wrong_order_of_operations",
+              "feedbackUk": "Ні, у задачі йдеться не про різницю."
+            },
+            {
+              "id": "c",
+              "cs": "Jen součin 16 a 4",
+              "uk": "Лише добуток 16 і 4",
+              "isCorrect": false,
+              "errorTag": "premature_unknown_search",
+              "feedbackUk": "Добуток потрібен, але ще не як готова відповідь: з нього треба взяти корінь."
+            },
+            {
+              "id": "d",
+              "cs": "Hned vydělit 16 číslem 4",
+              "uk": "Одразу поділити 16 на 4",
+              "isCorrect": false,
+              "errorTag": "misreads_ratio_language",
+              "feedbackUk": "Ще рано ділити. Спочатку треба слідувати самому тексту задачі."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Подумай, які дві величини прямо названі в умові."
+            },
+            {
+              "level": 2,
+              "uk": "Одна величина - це сума. Друга - це квадратний корінь із добутку."
+            },
+            {
+              "level": 3,
+              "uk": "Спочатку будуємо дві готові відповіді, а не виконуємо довільну дію."
+            }
+          ],
+          "skillTags": ["arithmetic_basic", "ratio_language"],
+          "errorTags": ["misreads_ratio_language", "wrong_order_of_operations"],
+          "takeawayUk": "Коли текст каже порівняти дві величини, спочатку знайди обидві."
+        },
+        {
+          "id": "tutorial-a-task-1-step-2",
+          "prompt": {
+            "cs": "Kolik je druhá odmocnina ze součinu 16 a 4?",
+            "uk": "Чому дорівнює квадратний корінь з добутку 16 і 4?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "8",
+              "uk": "8",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. 16 × 4 = 64, а √64 = 8."
+            },
+            {
+              "id": "b",
+              "cs": "4",
+              "uk": "4",
+              "isCorrect": false,
+              "errorTag": "root_square_confusion",
+              "feedbackUk": "Тут помилка: це було б схоже на корінь лише з 16, а не з добутку."
+            },
+            {
+              "id": "c",
+              "cs": "16",
+              "uk": "16",
+              "isCorrect": false,
+              "errorTag": "wrong_order_of_operations",
+              "feedbackUk": "Ні, корінь із 64 дорівнює 8, а не 16."
+            },
+            {
+              "id": "d",
+              "cs": "20",
+              "uk": "20",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "20 - це сума 16 і 4, а зараз питають зовсім іншу величину."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Спочатку знайди добуток."
+            },
+            {
+              "level": 2,
+              "uk": "16 × 4 = 64."
+            },
+            {
+              "level": 3,
+              "uk": "Тепер знайди число, квадрат якого дорівнює 64."
+            }
+          ],
+          "skillTags": ["arithmetic_basic"],
+          "errorTags": ["root_square_confusion"],
+          "takeawayUk": "Фраза «корінь із добутку» означає: спочатку добуток, потім корінь."
+        },
+        {
+          "id": "tutorial-a-task-1-step-3",
+          "prompt": {
+            "cs": "Jak určíme, kolikrát je 20 větší než 8?",
+            "uk": "Як визначити, у скільки разів 20 більше за 8?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "Vydělíme 20 číslem 8",
+              "uk": "Поділимо 20 на 8",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. «У скільки разів» означає ділення."
+            },
+            {
+              "id": "b",
+              "cs": "Odečteme 8 od 20",
+              "uk": "Віднімемо 8 від 20",
+              "isCorrect": false,
+              "errorTag": "confuses_more_by_vs_more_times",
+              "feedbackUk": "Це відповідало б питанню «на скільки більше», а не «у скільки разів»."
+            },
+            {
+              "id": "c",
+              "cs": "Sečteme 20 a 8",
+              "uk": "Додамо 20 і 8",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Сума тут не показує відношення між числами."
+            },
+            {
+              "id": "d",
+              "cs": "Vydělíme 8 číslem 20",
+              "uk": "Поділимо 8 на 20",
+              "isCorrect": false,
+              "errorTag": "misreads_ratio_language",
+              "feedbackUk": "Порядок важливий: питають, у скільки разів перше число більше за друге."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Порівняй запитання «на скільки» і «у скільки разів»."
+            },
+            {
+              "level": 2,
+              "uk": "«У скільки разів» майже завжди означає ділення."
+            },
+            {
+              "level": 3,
+              "uk": "Тут треба саме 20 ÷ 8."
+            }
+          ],
+          "skillTags": ["ratio_language"],
+          "errorTags": ["confuses_more_by_vs_more_times", "misreads_ratio_language"],
+          "takeawayUk": "Щоб знайти відношення, діли першу знайдену величину на другу."
+        }
+      ]
+    },
+    {
+      "id": "tutorial-a-task-2",
+      "taskNumber": 2,
+      "titleCs": "Zlomky a dlouhý výraz",
+      "titleUk": "Дроби і довгий вираз",
+      "examStyleGroup": "fractions_and_order",
+      "difficulty": 2,
+      "available": true,
+      "skills": [
+        "fractions_basic_operations",
+        "fractions_common_denominator",
+        "compound_expression_order_of_operations"
+      ],
+      "errorTags": ["wrong_common_denominator", "loses_negative_sign", "wrong_order_of_operations"],
+      "intro": {
+        "typeLabelUk": "Це задача на дроби, порядок дій і акуратність.",
+        "whyUk": "Довгі вирази лякають лише тоді, коли ми намагаємося порахувати все одразу.",
+        "tipUk": "Розкладай вираз на маленькі частини: дужки, спільний знаменник, множення."
+      },
+      "promptSegments": [
+        {
+          "id": "t2-s1",
+          "cs": "Vypočítejte: -3 · (1/4 - 1/6).",
+          "uk": "Обчисли: -3 · (1/4 - 1/6)."
+        },
+        {
+          "id": "t2-s2",
+          "cs": "Nejprve určete výsledek v závorce a potom vynásobte celým číslem.",
+          "uk": "Спочатку знайди значення в дужках, а потім помнож на ціле число."
+        }
+      ],
+      "fullTranslationUk": "У цій seed-задачі ми беремо коротку версію дробового виразу: спершу приводимо дроби до спільного знаменника, потім віднімаємо, і лише потім множимо на -3.",
+      "finalSummaryUk": "У дробах спочатку наводимо лад усередині дужок, а мінус перед множенням не можна загубити.",
+      "steps": [
+        {
+          "id": "tutorial-a-task-2-step-1",
+          "prompt": {
+            "cs": "Jaký je společný jmenovatel čísel 4 a 6?",
+            "uk": "Який спільний знаменник у 4 і 6?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "12",
+              "uk": "12",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. 12 ділиться і на 4, і на 6."
+            },
+            {
+              "id": "b",
+              "cs": "10",
+              "uk": "10",
+              "isCorrect": false,
+              "errorTag": "wrong_common_denominator",
+              "feedbackUk": "10 не ділиться на 6 без остачі, тому не підходить."
+            },
+            {
+              "id": "c",
+              "cs": "24",
+              "uk": "24",
+              "isCorrect": false,
+              "errorTag": "wrong_common_denominator",
+              "feedbackUk": "24 теж можна використати, але тут питають найзручніший спільний знаменник."
+            },
+            {
+              "id": "d",
+              "cs": "2",
+              "uk": "2",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "2 не підходить як знаменник для обох дробів."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Шукай число, яке ділиться і на 4, і на 6."
+            },
+            {
+              "level": 2,
+              "uk": "Найменше таке число - 12."
+            },
+            {
+              "level": 3,
+              "uk": "Саме тому 1/4 = 3/12, а 1/6 = 2/12."
+            }
+          ],
+          "skillTags": ["fractions_common_denominator"],
+          "errorTags": ["wrong_common_denominator"],
+          "takeawayUk": "Не додавай і не віднімай дроби без спільного знаменника."
+        },
+        {
+          "id": "tutorial-a-task-2-step-2",
+          "prompt": {
+            "cs": "Kolik je 1/4 - 1/6?",
+            "uk": "Чому дорівнює 1/4 - 1/6?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "1/12",
+              "uk": "1/12",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. 3/12 - 2/12 = 1/12."
+            },
+            {
+              "id": "b",
+              "cs": "2/10",
+              "uk": "2/10",
+              "isCorrect": false,
+              "errorTag": "wrong_common_denominator",
+              "feedbackUk": "Тут схоже, що дроби віднімали без правильного спільного знаменника."
+            },
+            {
+              "id": "c",
+              "cs": "2/12",
+              "uk": "2/12",
+              "isCorrect": false,
+              "errorTag": "wrong_order_of_operations",
+              "feedbackUk": "Після приведення до знаменника 12 треба ще відняти чисельники."
+            },
+            {
+              "id": "d",
+              "cs": "-1/12",
+              "uk": "-1/12",
+              "isCorrect": false,
+              "errorTag": "loses_negative_sign",
+              "feedbackUk": "У дужках немає причини отримати мінус: 1/4 більше за 1/6."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Запиши обидва дроби зі знаменником 12."
+            },
+            {
+              "level": 2,
+              "uk": "1/4 = 3/12, а 1/6 = 2/12."
+            },
+            {
+              "level": 3,
+              "uk": "Тепер відніми тільки чисельники."
+            }
+          ],
+          "skillTags": ["fractions_basic_operations", "fractions_common_denominator"],
+          "errorTags": ["wrong_common_denominator", "loses_negative_sign"],
+          "takeawayUk": "Після приведення до одного знаменника працюємо лише з чисельниками."
+        },
+        {
+          "id": "tutorial-a-task-2-step-3",
+          "prompt": {
+            "cs": "Co uděláme s výsledkem 1/12 dál?",
+            "uk": "Що робимо далі з результатом 1/12?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "Vynásobíme ho číslem -3",
+              "uk": "Помножимо його на -3",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Вираз має вигляд -3 · (1/12)."
+            },
+            {
+              "id": "b",
+              "cs": "Ještě jednou ho odečteme",
+              "uk": "Ще раз віднімемо його",
+              "isCorrect": false,
+              "errorTag": "wrong_order_of_operations",
+              "feedbackUk": "Ні, після дужок у виразі залишилося тільки множення."
+            },
+            {
+              "id": "c",
+              "cs": "Změníme jmenovatel na 3",
+              "uk": "Змінимо знаменник на 3",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Ні, жодної такої дії в записі немає."
+            },
+            {
+              "id": "d",
+              "cs": "Zapomeneme na znaménko minus",
+              "uk": "Проігноруємо знак мінус",
+              "isCorrect": false,
+              "errorTag": "loses_negative_sign",
+              "feedbackUk": "Мінус перед множником діє на весь результат у дужках."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Подивись на дію перед дужками."
+            },
+            {
+              "level": 2,
+              "uk": "Там стоїть множення на -3."
+            },
+            {
+              "level": 3,
+              "uk": "Отже результат стане -3/12, тобто -1/4."
+            }
+          ],
+          "skillTags": ["compound_expression_order_of_operations", "signed_number_multiplication"],
+          "errorTags": ["loses_negative_sign", "wrong_order_of_operations"],
+          "takeawayUk": "Множник перед дужками застосовується до всього виразу в дужках."
+        }
+      ]
+    },
+    {
+      "id": "tutorial-a-task-3",
+      "taskNumber": 3,
+      "titleCs": "Vzorce a úpravy výrazů",
+      "titleUk": "Формули та спрощення виразів",
+      "examStyleGroup": "patterns_and_algebra",
+      "difficulty": 3,
+      "available": true,
+      "skills": ["square_of_sum_pattern", "expand_brackets", "combine_like_terms"],
+      "errorTags": ["formula_not_recognized", "wrong_bracket_expansion_sign", "fails_to_combine_like_terms"],
+      "intro": {
+        "typeLabelUk": "Це задача на формули і впізнавання шаблону.",
+        "whyUk": "У таких задачах часто вигідніше впізнати відому форму, ніж рахувати все з нуля.",
+        "tipUk": "Дивись на середній член: він часто підказує, яку формулу маємо."
+      },
+      "promptSegments": [
+        {
+          "id": "t3-s1",
+          "cs": "Doplňte tvar druhé mocniny součtu: a^2 + 18a + ?",
+          "uk": "Доповни вираз до квадрата суми: a^2 + 18a + ?"
+        }
+      ],
+      "fullTranslationUk": "У цьому seed-завданні ми тренуємо впізнавання формули квадрата суми: a^2 + 2ab + b^2.",
+      "finalSummaryUk": "Коли бачиш вираз, схожий на a² + 2ab + b², шукай шаблон, а не хаотичні обчислення.",
+      "steps": [
+        {
+          "id": "tutorial-a-task-3-step-1",
+          "prompt": {
+            "cs": "Na jaký vzorec je tento výraz podobný?",
+            "uk": "На яку формулу схожий цей вираз?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "(a + b)^2 = a^2 + 2ab + b^2",
+              "uk": "(a + b)^2 = a^2 + 2ab + b^2",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так, саме це і є потрібний шаблон."
+            },
+            {
+              "id": "b",
+              "cs": "(a - b)^2 = a^2 - 2ab + b^2",
+              "uk": "(a - b)^2 = a^2 - 2ab + b^2",
+              "isCorrect": false,
+              "errorTag": "formula_not_recognized",
+              "feedbackUk": "Тут середній член додатний, а не від'ємний."
+            },
+            {
+              "id": "c",
+              "cs": "a^2 - b^2 = (a - b)(a + b)",
+              "uk": "a^2 - b^2 = (a - b)(a + b)",
+              "isCorrect": false,
+              "errorTag": "formula_not_recognized",
+              "feedbackUk": "Це інша формула: різниця квадратів."
+            },
+            {
+              "id": "d",
+              "cs": "ab = ba",
+              "uk": "ab = ba",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Це вірна властивість, але не той шаблон, який нам потрібен."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Подивись на три частини виразу: квадрат, середній член, ще один квадрат."
+            },
+            {
+              "level": 2,
+              "uk": "Середній член у квадраті суми має вигляд 2ab."
+            },
+            {
+              "level": 3,
+              "uk": "Тут саме така будова: a² + 18a + ?"
+            }
+          ],
+          "skillTags": ["square_of_sum_pattern"],
+          "errorTags": ["formula_not_recognized"],
+          "takeawayUk": "Спершу впізнай форму, а вже потім шукай число."
+        },
+        {
+          "id": "tutorial-a-task-3-step-2",
+          "prompt": {
+            "cs": "Když 2ab = 18a a a = a, jaké je b?",
+            "uk": "Якщо 2ab = 18a і a = a, то чому дорівнює b?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "9",
+              "uk": "9",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. 2 · a · 9 = 18a."
+            },
+            {
+              "id": "b",
+              "cs": "18",
+              "uk": "18",
+              "isCorrect": false,
+              "errorTag": "formula_not_recognized",
+              "feedbackUk": "Тоді середній член був би 36a, а не 18a."
+            },
+            {
+              "id": "c",
+              "cs": "6",
+              "uk": "6",
+              "isCorrect": false,
+              "errorTag": "fails_to_combine_like_terms",
+              "feedbackUk": "Перевір: 2 · a · 6 = 12a, цього замало."
+            },
+            {
+              "id": "d",
+              "cs": "a",
+              "uk": "a",
+              "isCorrect": false,
+              "errorTag": "formula_not_recognized",
+              "feedbackUk": "Тут шукаємо саме число b, а не букву."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Поділи 18a на 2a."
+            },
+            {
+              "level": 2,
+              "uk": "18a ÷ 2a = 9."
+            },
+            {
+              "level": 3,
+              "uk": "Отже b = 9."
+            }
+          ],
+          "skillTags": ["square_of_sum_pattern"],
+          "errorTags": ["formula_not_recognized"],
+          "takeawayUk": "Середній член допомагає знайти другий доданок у квадраті суми."
+        },
+        {
+          "id": "tutorial-a-task-3-step-3",
+          "prompt": {
+            "cs": "Jaký člen patří do posledního místa?",
+            "uk": "Який член треба поставити на останнє місце?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "81",
+              "uk": "81",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Якщо b = 9, то b^2 = 81."
+            },
+            {
+              "id": "b",
+              "cs": "18",
+              "uk": "18",
+              "isCorrect": false,
+              "errorTag": "fails_to_combine_like_terms",
+              "feedbackUk": "Потрібно взяти квадрат числа b, а не сам середній коефіцієнт."
+            },
+            {
+              "id": "c",
+              "cs": "9",
+              "uk": "9",
+              "isCorrect": false,
+              "errorTag": "formula_not_recognized",
+              "feedbackUk": "Останній член у формулі - це b², а не просто b."
+            },
+            {
+              "id": "d",
+              "cs": "162",
+              "uk": "162",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Це не відповідає жодному елементу формули."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Подумай, що стоїть в кінці формули a² + 2ab + b²."
+            },
+            {
+              "level": 2,
+              "uk": "Там стоїть b²."
+            },
+            {
+              "level": 3,
+              "uk": "Для b = 9 маємо 9² = 81."
+            }
+          ],
+          "skillTags": ["square_of_sum_pattern", "combine_like_terms"],
+          "errorTags": ["fails_to_combine_like_terms", "formula_not_recognized"],
+          "takeawayUk": "Після впізнавання шаблону решта кроків стає короткою перевіркою."
+        }
+      ]
+    },
+    {
+      "id": "tutorial-a-task-4",
+      "taskNumber": 4,
+      "titleCs": "Lineární rovnice krok za krokem",
+      "titleUk": "Лінійне рівняння крок за кроком",
+      "examStyleGroup": "linear_equations",
+      "difficulty": 3,
+      "available": true,
+      "skills": ["linear_equation_with_decimals", "equation_term_transfer", "equation_collecting_terms"],
+      "errorTags": ["wrong_bracket_expansion_sign", "decimal_coefficient_confusion", "transfers_equation_terms_wrongly"],
+      "intro": {
+        "typeLabelUk": "Це задача на лінійне рівняння.",
+        "whyUk": "Рівняння не треба вгадувати. Його треба спростити стандартним порядком.",
+        "tipUk": "Спочатку позбудься дужок, потім збери y в один бік, а числа - в інший."
+      },
+      "promptSegments": [
+        {
+          "id": "t4-s1",
+          "cs": "Řešte rovnici: 0,1(y + 5) = 0,9 - 0,2y.",
+          "uk": "Розв'яжи рівняння: 0,1(y + 5) = 0,9 - 0,2y."
+        }
+      ],
+      "fullTranslationUk": "У цій seed-задачі тренуємо стандартний алгоритм: розкрити дужки, перенести члени з y в один бік, а числа - в інший.",
+      "finalSummaryUk": "Навіть рівняння з десятковими коефіцієнтами розв'язується тим самим порядком: дужки, зібрати невідомі, поділити на коефіцієнт.",
+      "steps": [
+        {
+          "id": "tutorial-a-task-4-step-1",
+          "prompt": {
+            "cs": "Co uděláme nejdřív s levou stranou rovnice?",
+            "uk": "Що робимо спочатку з лівою частиною рівняння?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "Roznásobíme 0,1 do závorky",
+              "uk": "Розкриємо дужки множенням на 0,1",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Спочатку потрібно прибрати дужки."
+            },
+            {
+              "id": "b",
+              "cs": "Hned převedeme všechno na pravou stranu",
+              "uk": "Одразу перенесемо все вправо",
+              "isCorrect": false,
+              "errorTag": "transfers_equation_terms_wrongly",
+              "feedbackUk": "Ще рано переносити, коли в лівій частині ще є дужки."
+            },
+            {
+              "id": "c",
+              "cs": "Vydělíme obě strany číslem 0,1",
+              "uk": "Поділимо обидві частини на 0,1",
+              "isCorrect": false,
+              "errorTag": "decimal_coefficient_confusion",
+              "feedbackUk": "Це не заборонено, але для початку найпростіше просто розкрити дужки."
+            },
+            {
+              "id": "d",
+              "cs": "Zrušíme závorku bez změny čísel",
+              "uk": "Приберемо дужки без змін",
+              "isCorrect": false,
+              "errorTag": "wrong_bracket_expansion_sign",
+              "feedbackUk": "Ні, множник 0,1 має вплинути на обидва доданки в дужках."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Почни з наведення порядку в лівій частині."
+            },
+            {
+              "level": 2,
+              "uk": "Множник 0,1 потрібно застосувати до y і до 5."
+            },
+            {
+              "level": 3,
+              "uk": "Отримаємо 0,1y + 0,5."
+            }
+          ],
+          "skillTags": ["linear_equation_with_decimals"],
+          "errorTags": ["wrong_bracket_expansion_sign", "decimal_coefficient_confusion"],
+          "takeawayUk": "До переносу членів спочатку прибери дужки."
+        },
+        {
+          "id": "tutorial-a-task-4-step-2",
+          "prompt": {
+            "cs": "Který krok je po úpravě 0,1y + 0,5 = 0,9 - 0,2y správný?",
+            "uk": "Який крок правильний після запису 0,1y + 0,5 = 0,9 - 0,2y?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "Převedeme -0,2y doleva a 0,5 doprava",
+              "uk": "Перенесемо -0,2y вліво, а 0,5 вправо",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. y збираємо в один бік, числа - в інший."
+            },
+            {
+              "id": "b",
+              "cs": "Převedeme 0,1y doprava a 0,9 doleva",
+              "uk": "Перенесемо 0,1y вправо, а 0,9 вліво",
+              "isCorrect": false,
+              "errorTag": "transfers_equation_terms_wrongly",
+              "feedbackUk": "Так теж можна, але в seed-flow ми обираємо стандартний простіший варіант: усі y вліво."
+            },
+            {
+              "id": "c",
+              "cs": "Sečteme 0,5 a 0,9 na různých stranách",
+              "uk": "Додамо 0,5 і 0,9, хоча вони по різні боки",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Числа по різні боки рівності не можна просто додати між собою."
+            },
+            {
+              "id": "d",
+              "cs": "Změníme 0,2y na 2y",
+              "uk": "Замінимо 0,2y на 2y",
+              "isCorrect": false,
+              "errorTag": "decimal_coefficient_confusion",
+              "feedbackUk": "Ні, десятковий коефіцієнт не можна просто «прибрати»."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Спробуй зібрати всі y з одного боку."
+            },
+            {
+              "level": 2,
+              "uk": "Числові доданки зручніше лишити з протилежного боку."
+            },
+            {
+              "level": 3,
+              "uk": "Має вийти 0,1y + 0,2y = 0,9 - 0,5."
+            }
+          ],
+          "skillTags": ["equation_term_transfer", "equation_collecting_terms"],
+          "errorTags": ["transfers_equation_terms_wrongly", "decimal_coefficient_confusion"],
+          "takeawayUk": "Після дужок збери всі невідомі разом."
+        },
+        {
+          "id": "tutorial-a-task-4-step-3",
+          "prompt": {
+            "cs": "Jaké je řešení rovnice?",
+            "uk": "Який розв'язок цього рівняння?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "y = 4/3",
+              "uk": "y = 4/3",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Після переносу маємо 0,3y = 0,4, отже y = 4/3."
+            },
+            {
+              "id": "b",
+              "cs": "y = 3/4",
+              "uk": "y = 3/4",
+              "isCorrect": false,
+              "errorTag": "transfers_equation_terms_wrongly",
+              "feedbackUk": "Це виглядає як переплутане ділення: треба 0,4 ділити на 0,3."
+            },
+            {
+              "id": "c",
+              "cs": "y = 4",
+              "uk": "y = 4",
+              "isCorrect": false,
+              "errorTag": "decimal_coefficient_confusion",
+              "feedbackUk": "Ні, коефіцієнт при y дорівнює 0,3, а не 0,1."
+            },
+            {
+              "id": "d",
+              "cs": "y = -4/3",
+              "uk": "y = -4/3",
+              "isCorrect": false,
+              "errorTag": "wrong_bracket_expansion_sign",
+              "feedbackUk": "Мінус тут не з'являється, якщо правильно перенести доданки."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Після переносу обчисли обидві сторони окремо."
+            },
+            {
+              "level": 2,
+              "uk": "0,1y + 0,2y = 0,3y, а 0,9 - 0,5 = 0,4."
+            },
+            {
+              "level": 3,
+              "uk": "Отже y = 0,4 / 0,3 = 4/3."
+            }
+          ],
+          "skillTags": ["linear_equation_with_decimals", "equation_collecting_terms"],
+          "errorTags": ["decimal_coefficient_confusion", "transfers_equation_terms_wrongly"],
+          "takeawayUk": "Останній крок у лінійному рівнянні - поділити на коефіцієнт при невідомому."
+        }
+      ]
+    },
+    {
+      "id": "tutorial-a-task-5",
+      "taskNumber": 5,
+      "titleCs": "Obsah pozemku a procenta",
+      "titleUk": "Площа ділянки і відсотки",
+      "examStyleGroup": "word_problem_geometry_percent",
+      "difficulty": 2,
+      "available": true,
+      "skills": ["area_square_rectangle", "percent_of_total_area", "multi_step_word_problem"],
+      "errorTags": ["wrong_base_area", "wrong_percent_base"],
+      "intro": {
+        "typeLabelUk": "Це задача на площу і відсотки.",
+        "whyUk": "У таких задачах майже завжди треба починати з усього цілого, а вже потім переходити до частин.",
+        "tipUk": "Спочатку площа всієї ділянки, потім площа будинку, потім площа ставка."
+      },
+      "promptSegments": [
+        {
+          "id": "t5-s1",
+          "cs": "Pozemek má tvar čtverce se stranou 30 m.",
+          "uk": "Ділянка має форму квадрата зі стороною 30 м."
+        },
+        {
+          "id": "t5-s2",
+          "cs": "Dům má pětkrát menší obsah než celý pozemek a jeho délka je polovina strany pozemku.",
+          "uk": "Площа будинку у 5 разів менша за площу всієї ділянки, а його довжина дорівнює половині сторони ділянки."
+        },
+        {
+          "id": "t5-s3",
+          "cs": "Rybníček zabírá 18 % obsahu pozemku.",
+          "uk": "Ставок займає 18 % площі ділянки."
+        }
+      ],
+      "fullTranslationUk": "Спочатку знайди площу всієї квадратної ділянки. Потім знайди площу будинку як одну п'яту від усієї площі. Далі можна знайти ширину будинку через площу прямокутника, а в другій частині окремо знайти 18 % площі ділянки для ставка.",
+      "finalSummaryUk": "У задачах на площу і відсотки найнадійніший маршрут такий: ціле, окремі частини, а потім підсумкове віднімання або поділ.",
+      "diagramSvg": "<svg viewBox='0 0 260 180' xmlns='http://www.w3.org/2000/svg'><rect x='20' y='20' width='160' height='160' rx='8' fill='#f7f1e6' stroke='#7c6952' stroke-width='2'/><rect x='40' y='50' width='80' height='60' rx='6' fill='#d9eadf' stroke='#2f6b52' stroke-width='2'/><ellipse cx='145' cy='105' rx='22' ry='16' fill='#cde5f2' stroke='#52748a' stroke-width='2'/><text x='100' y='15' text-anchor='middle' font-size='12' fill='#5e6a61'>30 m</text><text x='80' y='86' text-anchor='middle' font-size='12' fill='#2f6b52'>dum</text><text x='145' y='109' text-anchor='middle' font-size='11' fill='#52748a'>rybnicek</text></svg>",
+      "steps": [
+        {
+          "id": "tutorial-a-task-5-step-1",
+          "prompt": {
+            "cs": "Co určíme nejdřív?",
+            "uk": "Що знайдемо спочатку?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "Obsah celého pozemku",
+              "uk": "Площу всієї ділянки",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Спочатку треба знайти площу всього квадрата."
+            },
+            {
+              "id": "b",
+              "cs": "Šířku domu",
+              "uk": "Ширину будинку",
+              "isCorrect": false,
+              "errorTag": "premature_unknown_search",
+              "feedbackUk": "Ще рано шукати ширину будинку, бо спочатку потрібна його площа."
+            },
+            {
+              "id": "c",
+              "cs": "Obsah rybníčku",
+              "uk": "Площу ставка",
+              "isCorrect": false,
+              "errorTag": "wrong_target_first",
+              "feedbackUk": "Ставок теж знадобиться, але не на першому кроці."
+            },
+            {
+              "id": "d",
+              "cs": "Obvod pozemku",
+              "uk": "Периметр ділянки",
+              "isCorrect": false,
+              "errorTag": "perimeter_area_confusion",
+              "feedbackUk": "Тут потрібна площа, а не периметр."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Подумай, що є «цілим» у цій задачі."
+            },
+            {
+              "level": 2,
+              "uk": "Спочатку знайди площу квадрата зі стороною 30 м."
+            },
+            {
+              "level": 3,
+              "uk": "30 × 30 = 900, це база для всіх наступних кроків."
+            }
+          ],
+          "skillTags": ["area_square_rectangle", "multi_step_word_problem"],
+          "errorTags": ["perimeter_area_confusion", "wrong_target_first"],
+          "takeawayUk": "У багатокроковій текстовій задачі спочатку знайди все ціле."
+        },
+        {
+          "id": "tutorial-a-task-5-step-2",
+          "prompt": {
+            "cs": "Jestliže dům má pětkrát menší obsah než pozemek, jaký má obsah?",
+            "uk": "Якщо площа будинку у 5 разів менша за площу ділянки, яка його площа?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "180 m²",
+              "uk": "180 м²",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. 900 ÷ 5 = 180."
+            },
+            {
+              "id": "b",
+              "cs": "4500 m²",
+              "uk": "4500 м²",
+              "isCorrect": false,
+              "errorTag": "wrong_base_area",
+              "feedbackUk": "Тут вийшло множення замість ділення. «У 5 разів менша» означає одна п'ята."
+            },
+            {
+              "id": "c",
+              "cs": "150 m²",
+              "uk": "150 м²",
+              "isCorrect": false,
+              "errorTag": "wrong_base_area",
+              "feedbackUk": "Перевір ділення уважно: 900 ÷ 5 = 180."
+            },
+            {
+              "id": "d",
+              "cs": "30 m²",
+              "uk": "30 м²",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "30 - це довжина сторони, а не площа будинку."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "«У 5 разів менша» означає взяти одну п'яту."
+            },
+            {
+              "level": 2,
+              "uk": "Площа ділянки дорівнює 900 м²."
+            },
+            {
+              "level": 3,
+              "uk": "900 ÷ 5 = 180 м²."
+            }
+          ],
+          "skillTags": ["fraction_of_whole", "area_square_rectangle"],
+          "errorTags": ["wrong_base_area"],
+          "takeawayUk": "Фраза «у кілька разів менше» часто означає поділ на це число."
+        },
+        {
+          "id": "tutorial-a-task-5-step-3",
+          "prompt": {
+            "cs": "Rybníček zabírá 18 % pozemku. Jaký má obsah?",
+            "uk": "Ставок займає 18 % ділянки. Яка його площа?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "162 m²",
+              "uk": "162 м²",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. 18 % від 900 м² - це 0,18 × 900 = 162 м²."
+            },
+            {
+              "id": "b",
+              "cs": "18 m²",
+              "uk": "18 м²",
+              "isCorrect": false,
+              "errorTag": "wrong_percent_base",
+              "feedbackUk": "18 - це лише відсоток, а не готова площа."
+            },
+            {
+              "id": "c",
+              "cs": "194,4 m²",
+              "uk": "194,4 м²",
+              "isCorrect": false,
+              "errorTag": "wrong_percent_base",
+              "feedbackUk": "Схоже, відсоток взяли не від тієї бази."
+            },
+            {
+              "id": "d",
+              "cs": "738 m²",
+              "uk": "738 м²",
+              "isCorrect": false,
+              "errorTag": "forgets_subtract_both_parts",
+              "feedbackUk": "738 м² - це скоріше вільна площа після віднімання, а не площа ставка."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Відсоток беремо від усієї площі ділянки."
+            },
+            {
+              "level": 2,
+              "uk": "Уся площа - 900 м²."
+            },
+            {
+              "level": 3,
+              "uk": "10 % це 90 м², 8 % це 72 м², разом 162 м²."
+            }
+          ],
+          "skillTags": ["percent_of_total_area", "multi_step_word_problem"],
+          "errorTags": ["wrong_percent_base", "forgets_subtract_both_parts"],
+          "takeawayUk": "Перед відсотками завжди перевіряй, від якої саме величини їх береш."
+        }
+      ]
+    },
+    {
+      "id": "tutorial-a-task-6",
+      "taskNumber": 6,
+      "titleCs": "Objem válce a jednotky",
+      "titleUk": "Об'єм циліндра і одиниці",
+      "examStyleGroup": "volume_units",
+      "difficulty": 2,
+      "available": true,
+      "skills": ["volume_from_base_area_and_height", "unit_conversion_mm_cm"],
+      "errorTags": ["unit_conversion_missing"],
+      "intro": {
+        "typeLabelUk": "Це задача на об'єм і переведення одиниць.",
+        "whyUk": "Найчастіша пастка тут не у формулі, а в тому, що висота і площа мають бути в сумісних одиницях.",
+        "tipUk": "Об'єм шару = площа основи × висота шару. Перед цим перевір одиниці."
+      },
+      "promptSegments": [
+        {
+          "id": "t6-s1",
+          "cs": "Zahradní nádoba má obsah dna 1500 cm².",
+          "uk": "Садова ємність має площу дна 1500 см²."
+        },
+        {
+          "id": "t6-s2",
+          "cs": "Hladina vody stoupla o 10 mm.",
+          "uk": "Рівень води піднявся на 10 мм."
+        },
+        {
+          "id": "t6-s3",
+          "cs": "Určete objem přidané vody a pak pracujte i s převodem litrů a centimetrů krychlových.",
+          "uk": "Знайди об'єм доданої води, а також використай перехід між літрами і кубічними сантиметрами."
+        }
+      ],
+      "fullTranslationUk": "Щоб знайти доданий об'єм, помнож площу дна на висоту шару води. Але спочатку приведи міліметри до сантиметрів. Потім за потреби переведи кубічні сантиметри в літри.",
+      "finalSummaryUk": "Формула об'єму працює лише тоді, коли одиниці узгоджені: см² треба множити на см, а не на мм.",
+      "diagramSvg": "<svg viewBox='0 0 220 190' xmlns='http://www.w3.org/2000/svg'><ellipse cx='110' cy='36' rx='55' ry='16' fill='#efe7d9' stroke='#7c6952' stroke-width='2'/><path d='M55 36v90c0 9 25 16 55 16s55-7 55-16V36' fill='#f7f1e6' stroke='#7c6952' stroke-width='2'/><ellipse cx='110' cy='126' rx='55' ry='16' fill='#cfe2ee' stroke='#52748a' stroke-width='2'/><line x1='175' y1='104' x2='175' y2='126' stroke='#9b5a29' stroke-width='2'/><text x='183' y='118' font-size='12' fill='#9b5a29'>10 mm</text><text x='110' y='168' text-anchor='middle' font-size='12' fill='#5e6a61'>S dna = 1500 cm²</text></svg>",
+      "steps": [
+        {
+          "id": "tutorial-a-task-6-step-1",
+          "prompt": {
+            "cs": "Co musíme udělat s údajem 10 mm před použitím vzorce?",
+            "uk": "Що треба зробити з величиною 10 мм перед використанням формули?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "Převést ji na centimetry",
+              "uk": "Перевести її в сантиметри",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Площа дна дана в см², тому висота теж має бути в сантиметрах."
+            },
+            {
+              "id": "b",
+              "cs": "Převést ji na litry",
+              "uk": "Перевести її в літри",
+              "isCorrect": false,
+              "errorTag": "unit_conversion_missing",
+              "feedbackUk": "Літри - це одиниці об'єму, а тут 10 мм - це висота."
+            },
+            {
+              "id": "c",
+              "cs": "Nechat ji v milimetrech",
+              "uk": "Залишити її в міліметрах",
+              "isCorrect": false,
+              "errorTag": "unit_conversion_missing",
+              "feedbackUk": "Так можна легко змішати несумісні одиниці."
+            },
+            {
+              "id": "d",
+              "cs": "Vydělit ji číslem 1500",
+              "uk": "Поділити її на 1500",
+              "isCorrect": false,
+              "errorTag": "wrong_volume_formula_direction",
+              "feedbackUk": "Ділити ще нічого не треба: спочатку лише узгоджуємо одиниці."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Подивись на одиниці площі дна."
+            },
+            {
+              "level": 2,
+              "uk": "см² добре поєднуються з висотою в см."
+            },
+            {
+              "level": 3,
+              "uk": "10 мм = 1 см."
+            }
+          ],
+          "skillTags": ["unit_conversion_mm_cm"],
+          "errorTags": ["unit_conversion_missing"],
+          "takeawayUk": "Перед формулою спочатку звір одиниці."
+        },
+        {
+          "id": "tutorial-a-task-6-step-2",
+          "prompt": {
+            "cs": "Jaký je objem přidané vody po zvýšení hladiny o 10 mm?",
+            "uk": "Який об'єм доданої води після підняття рівня на 10 мм?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "1500 cm³",
+              "uk": "1500 см³",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. 1500 см² × 1 см = 1500 см³."
+            },
+            {
+              "id": "b",
+              "cs": "150 cm³",
+              "uk": "150 см³",
+              "isCorrect": false,
+              "errorTag": "unit_conversion_missing",
+              "feedbackUk": "Схоже, 10 мм помилково перетворили на 0,1 см."
+            },
+            {
+              "id": "c",
+              "cs": "15000 cm³",
+              "uk": "15000 см³",
+              "isCorrect": false,
+              "errorTag": "wrong_volume_formula_direction",
+              "feedbackUk": "Тут з'явилося зайве множення на 10 після переведення."
+            },
+            {
+              "id": "d",
+              "cs": "1,5 cm³",
+              "uk": "1,5 см³",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Для такої площі дна настільки малий об'єм не підходить."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Формула шару: площа основи × висота."
+            },
+            {
+              "level": 2,
+              "uk": "Висота шару тут дорівнює 1 см."
+            },
+            {
+              "level": 3,
+              "uk": "1500 × 1 = 1500 см³."
+            }
+          ],
+          "skillTags": ["volume_from_base_area_and_height", "unit_conversion_mm_cm"],
+          "errorTags": ["unit_conversion_missing", "wrong_volume_formula_direction"],
+          "takeawayUk": "Об'єм шару легко знайти, якщо бачиш зв'язок «площа основи × висота»."
+        },
+        {
+          "id": "tutorial-a-task-6-step-3",
+          "prompt": {
+            "cs": "Kolik je 1500 cm³ v litrech?",
+            "uk": "Скільки становить 1500 см³ у літрах?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "1,5 l",
+              "uk": "1,5 л",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. 1000 см³ = 1 л, тому 1500 см³ = 1,5 л."
+            },
+            {
+              "id": "b",
+              "cs": "15 l",
+              "uk": "15 л",
+              "isCorrect": false,
+              "errorTag": "unit_conversion_missing",
+              "feedbackUk": "Це в десять разів забагато."
+            },
+            {
+              "id": "c",
+              "cs": "0,15 l",
+              "uk": "0,15 л",
+              "isCorrect": false,
+              "errorTag": "unit_conversion_missing",
+              "feedbackUk": "Тут кома зсунута в неправильний бік."
+            },
+            {
+              "id": "d",
+              "cs": "1500 l",
+              "uk": "1500 л",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "см³ і літри не збігаються один до одного."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Пригадай зв'язок між літром і кубічними сантиметрами."
+            },
+            {
+              "level": 2,
+              "uk": "1 л = 1000 см³."
+            },
+            {
+              "level": 3,
+              "uk": "1500 см³ = 1,5 л."
+            }
+          ],
+          "skillTags": ["unit_conversion_cm3_liters", "volume_from_base_area_and_height"],
+          "errorTags": ["unit_conversion_missing"],
+          "takeawayUk": "Після обчислення в см³ окремо перевір, чи треба дати відповідь у літрах."
+        }
+      ]
+    },
+    {
+      "id": "tutorial-a-task-7",
+      "taskNumber": 7,
+      "titleCs": "Úhly a přímky",
+      "titleUk": "Кути і прямі",
+      "examStyleGroup": "geometry_angles",
+      "difficulty": 2,
+      "available": true,
+      "skills": ["angles_with_parallel_and_perpendicular_lines"],
+      "errorTags": ["parallel_perpendicular_confusion"],
+      "intro": {
+        "typeLabelUk": "Це задача на кути і властивості прямих.",
+        "whyUk": "Такі задачі не розв'язують «на око». Треба бачити 90°, суміжні кути, вертикальні кути і зв'язки при паралельних прямих.",
+        "tipUk": "Спершу знайди, де є перпендикулярність і паралельність. Потім переходь до конкретного кута."
+      },
+      "promptSegments": [
+        {
+          "id": "t7-s1",
+          "cs": "Přímky p a q jsou rovnoběžné.",
+          "uk": "Прямі p і q паралельні."
+        },
+        {
+          "id": "t7-s2",
+          "cs": "Přímka r je kolmá na přímku p.",
+          "uk": "Пряма r перпендикулярна до прямої p."
+        },
+        {
+          "id": "t7-s3",
+          "cs": "Jiná přímka t protíná obě rovnoběžky a s přímkou p svírá úhel 35°.",
+          "uk": "Інша пряма t перетинає обидві паралельні прямі й утворює з прямою p кут 35°."
+        }
+      ],
+      "fullTranslationUk": "Тут важливо не вимірювати малюнок. Якщо p і q паралельні, а r перпендикулярна до p, то вона також перпендикулярна і до q. Пряма t дає кут 35° з p, а інші кути треба виводити через суміжність, вертикальність і паралельність.",
+      "finalSummaryUk": "У задачах на кути спочатку збирай властивості фігури, а вже потім шукай конкретне число.",
+      "diagramSvg": "<svg viewBox='0 0 280 180' xmlns='http://www.w3.org/2000/svg'><line x1='30' y1='45' x2='250' y2='45' stroke='#52748a' stroke-width='3'/><line x1='30' y1='130' x2='250' y2='130' stroke='#52748a' stroke-width='3'/><line x1='90' y1='20' x2='90' y2='155' stroke='#9b5a29' stroke-width='3'/><line x1='40' y1='155' x2='210' y2='10' stroke='#2f6b52' stroke-width='3'/><path d='M110 45 A20 20 0 0 0 103 31' fill='none' stroke='#2f6b52' stroke-width='2'/><text x='114' y='30' font-size='12' fill='#2f6b52'>35°</text><text x='14' y='48' font-size='12' fill='#52748a'>p</text><text x='14' y='133' font-size='12' fill='#52748a'>q</text><text x='95' y='16' font-size='12' fill='#9b5a29'>r</text><text x='214' y='14' font-size='12' fill='#2f6b52'>t</text></svg>",
+      "steps": [
+        {
+          "id": "tutorial-a-task-7-step-1",
+          "prompt": {
+            "cs": "Co můžeme určit hned z podmínky, že r je kolmá na p a p je rovnoběžná s q?",
+            "uk": "Що можна відразу визначити з умови, що r перпендикулярна до p, а p паралельна q?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "r je kolmá i na q",
+              "uk": "r також перпендикулярна до q",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Якщо пряма перпендикулярна одній з двох паралельних, то вона перпендикулярна і другій."
+            },
+            {
+              "id": "b",
+              "cs": "r je rovnoběžná s q",
+              "uk": "r паралельна q",
+              "isCorrect": false,
+              "errorTag": "parallel_perpendicular_confusion",
+              "feedbackUk": "Ні, тут сплутано паралельність і перпендикулярність."
+            },
+            {
+              "id": "c",
+              "cs": "Úhel mezi r a q je 35°",
+              "uk": "Кут між r і q дорівнює 35°",
+              "isCorrect": false,
+              "errorTag": "guesses_from_diagram",
+              "feedbackUk": "35° стосується іншої прямої t, а не r."
+            },
+            {
+              "id": "d",
+              "cs": "Nelze určit nic",
+              "uk": "Нічого визначити не можна",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Ні, з паралельності й перпендикулярності можна зробити важливий висновок."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Подумай, що відбувається з кутами при двох паралельних прямих."
+            },
+            {
+              "level": 2,
+              "uk": "Перпендикуляр до однієї паралельної лишається перпендикуляром і до другої."
+            },
+            {
+              "level": 3,
+              "uk": "Отже між r і q теж кут 90°."
+            }
+          ],
+          "skillTags": ["angles_with_parallel_and_perpendicular_lines"],
+          "errorTags": ["parallel_perpendicular_confusion"],
+          "takeawayUk": "Перед обчисленням кутів спершу зафіксуй усі 90° і паралельні напрями."
+        },
+        {
+          "id": "tutorial-a-task-7-step-2",
+          "prompt": {
+            "cs": "Když přímka t svírá s p úhel 35°, jaký je přilehlý úhel na téže přímce p?",
+            "uk": "Якщо пряма t утворює з p кут 35°, то який суміжний кут на цій самій прямій p?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "145°",
+              "uk": "145°",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Суміжні кути разом дають 180°, тому 180° - 35° = 145°."
+            },
+            {
+              "id": "b",
+              "cs": "55°",
+              "uk": "55°",
+              "isCorrect": false,
+              "errorTag": "parallel_perpendicular_confusion",
+              "feedbackUk": "Ні, тут безпідставно з'явився кут до 90°, а треба працювати із 180°."
+            },
+            {
+              "id": "c",
+              "cs": "35°",
+              "uk": "35°",
+              "isCorrect": false,
+              "errorTag": "guesses_from_diagram",
+              "feedbackUk": "Вертикальний кут може бути 35°, але суміжний - ні."
+            },
+            {
+              "id": "d",
+              "cs": "90°",
+              "uk": "90°",
+              "isCorrect": false,
+              "errorTag": "parallel_perpendicular_confusion",
+              "feedbackUk": "90° з'являється для перпендикулярних прямих, але тут треба саме суміжний кут."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Суміжні кути лежать на одній прямій."
+            },
+            {
+              "level": 2,
+              "uk": "На прямій завжди 180°."
+            },
+            {
+              "level": 3,
+              "uk": "Тому 180° - 35° = 145°."
+            }
+          ],
+          "skillTags": ["angles_with_parallel_and_perpendicular_lines"],
+          "errorTags": ["parallel_perpendicular_confusion"],
+          "takeawayUk": "Якщо кути суміжні, думай про 180°, а не про «схожість на малюнку»."
+        },
+        {
+          "id": "tutorial-a-task-7-step-3",
+          "prompt": {
+            "cs": "Jaký úhel svírá přímka t s rovnoběžkou q v odpovídající poloze?",
+            "uk": "Який кут утворює пряма t з паралельною прямою q у відповідному положенні?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "35°",
+              "uk": "35°",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Відповідні кути при паралельних прямих рівні."
+            },
+            {
+              "id": "b",
+              "cs": "145°",
+              "uk": "145°",
+              "isCorrect": false,
+              "errorTag": "parallel_perpendicular_confusion",
+              "feedbackUk": "145° - це суміжний кут на верхній прямій, але в однаковому положенні буде 35°."
+            },
+            {
+              "id": "c",
+              "cs": "90°",
+              "uk": "90°",
+              "isCorrect": false,
+              "errorTag": "parallel_perpendicular_confusion",
+              "feedbackUk": "90° пов'язане з r, а не з t."
+            },
+            {
+              "id": "d",
+              "cs": "Nelze určit",
+              "uk": "Неможливо визначити",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Можна, якщо використати властивість відповідних кутів при паралельних прямих."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "У паралельних прямих шукай однакове розташування кута."
+            },
+            {
+              "level": 2,
+              "uk": "Відповідні кути рівні."
+            },
+            {
+              "level": 3,
+              "uk": "Тому нижній відповідний кут теж 35°."
+            }
+          ],
+          "skillTags": ["angles_with_parallel_and_perpendicular_lines"],
+          "errorTags": ["parallel_perpendicular_confusion"],
+          "takeawayUk": "Кути при паралельних прямих не вгадують, а пов'язують через відомі типи пар."
+        }
+      ]
+    },
+    {
+      "id": "tutorial-a-task-8",
+      "taskNumber": 8,
+      "titleCs": "Body na obvodu",
+      "titleUk": "Точки на периметрі",
+      "examStyleGroup": "geometry_counting",
+      "difficulty": 2,
+      "available": true,
+      "skills": ["counting_points_on_perimeter", "perimeter_from_equal_spacing"],
+      "errorTags": ["point_interval_cycle_confusion"],
+      "intro": {
+        "typeLabelUk": "Це задача на периметр, інтервали і замкнений контур.",
+        "whyUk": "Учні часто помиляються тут не в арифметиці, а в самій структурі: на замкненому контурі кількість проміжків і точок поводиться не так, як на відрізку.",
+        "tipUk": "Спершу виріши, що саме ти рахуєш: точки, проміжки чи весь периметр."
+      },
+      "promptSegments": [
+        {
+          "id": "t8-s1",
+          "cs": "Po obvodu obdélníkové zahrady je vysazeno 24 rostlin ve stejných rozestupech 40 cm.",
+          "uk": "По периметру прямокутного саду висаджено 24 рослини на однаковій відстані 40 см."
+        },
+        {
+          "id": "t8-s2",
+          "cs": "Jedna delší strana je o čtvrtinu delší než kratší strana.",
+          "uk": "Одна довша сторона на чверть довша за коротшу."
+        }
+      ],
+      "fullTranslationUk": "На замкненому контурі кількість проміжків дорівнює кількості рослин. Спочатку знайди весь периметр через кількість рівних проміжків. Потім акуратно переведи фразу про «чверть довша» у відношення між сторонами.",
+      "finalSummaryUk": "У задачах на контур головне правильно перевести текст у структуру: замкнене коло точок, рівні інтервали, співвідношення сторін.",
+      "diagramSvg": "<svg viewBox='0 0 280 190' xmlns='http://www.w3.org/2000/svg'><rect x='45' y='40' width='180' height='100' rx='8' fill='#f7f1e6' stroke='#7c6952' stroke-width='2'/><g fill='#2f6b52'> <circle cx='45' cy='40' r='4'/><circle cx='81' cy='40' r='4'/><circle cx='117' cy='40' r='4'/><circle cx='153' cy='40' r='4'/><circle cx='189' cy='40' r='4'/><circle cx='225' cy='40' r='4'/> <circle cx='225' cy='73' r='4'/><circle cx='225' cy='106' r='4'/><circle cx='225' cy='140' r='4'/> <circle cx='189' cy='140' r='4'/><circle cx='153' cy='140' r='4'/><circle cx='117' cy='140' r='4'/><circle cx='81' cy='140' r='4'/><circle cx='45' cy='140' r='4'/> <circle cx='45' cy='106' r='4'/><circle cx='45' cy='73' r='4'/> </g><text x='135' y='28' text-anchor='middle' font-size='12' fill='#5e6a61'>40 cm mezi sousednimi body</text></svg>",
+      "steps": [
+        {
+          "id": "tutorial-a-task-8-step-1",
+          "prompt": {
+            "cs": "Kolik stejných úseků délky 40 cm je na uzavřeném obvodu, když je po něm 24 rostlin?",
+            "uk": "Скільки рівних відрізків по 40 см є на замкненому контурі, якщо на ньому 24 рослини?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "24",
+              "uk": "24",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. На замкненому контурі кількість проміжків дорівнює кількості точок."
+            },
+            {
+              "id": "b",
+              "cs": "23",
+              "uk": "23",
+              "isCorrect": false,
+              "errorTag": "point_interval_cycle_confusion",
+              "feedbackUk": "23 було б на відкритому відрізку, але тут контур замкнений."
+            },
+            {
+              "id": "c",
+              "cs": "12",
+              "uk": "12",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Ні, кожна сусідня пара рослин задає свій інтервал."
+            },
+            {
+              "id": "d",
+              "cs": "25",
+              "uk": "25",
+              "isCorrect": false,
+              "errorTag": "point_interval_cycle_confusion",
+              "feedbackUk": "На замкненому контурі не треба додавати ще один проміжок «в кінці»."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Порівняй відрізок і замкнений контур."
+            },
+            {
+              "level": 2,
+              "uk": "На контурі остання точка з'єднується з першою."
+            },
+            {
+              "level": 3,
+              "uk": "Тому тут 24 проміжки, а не 23."
+            }
+          ],
+          "skillTags": ["counting_points_on_perimeter", "perimeter_from_equal_spacing"],
+          "errorTags": ["point_interval_cycle_confusion"],
+          "takeawayUk": "На замкненому периметрі точки і проміжки рахуються по-рівному."
+        },
+        {
+          "id": "tutorial-a-task-8-step-2",
+          "prompt": {
+            "cs": "Jaký je obvod zahrady?",
+            "uk": "Який периметр саду?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "960 cm",
+              "uk": "960 см",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. 24 інтервали по 40 см дають 960 см."
+            },
+            {
+              "id": "b",
+              "cs": "920 cm",
+              "uk": "920 см",
+              "isCorrect": false,
+              "errorTag": "point_interval_cycle_confusion",
+              "feedbackUk": "Це вийшло б із 23 інтервалів, але контур замкнений."
+            },
+            {
+              "id": "c",
+              "cs": "240 cm",
+              "uk": "240 см",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Тут загублено більшу частину проміжків."
+            },
+            {
+              "id": "d",
+              "cs": "96 cm",
+              "uk": "96 см",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Перевір множення: 24 × 40 значно більше."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Периметр тут складається з однакових інтервалів."
+            },
+            {
+              "level": 2,
+              "uk": "Інтервалів 24, кожен по 40 см."
+            },
+            {
+              "level": 3,
+              "uk": "24 × 40 = 960 см."
+            }
+          ],
+          "skillTags": ["perimeter_from_equal_spacing", "counting_points_on_perimeter"],
+          "errorTags": ["point_interval_cycle_confusion"],
+          "takeawayUk": "Після правильної структури арифметика стає простою."
+        },
+        {
+          "id": "tutorial-a-task-8-step-3",
+          "prompt": {
+            "cs": "Když delší strana je o čtvrtinu delší než kratší, jaký vztah je správný?",
+            "uk": "Якщо довша сторона на чверть довша за коротшу, яке співвідношення правильне?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "delší = 5/4 kratší",
+              "uk": "довша = 5/4 коротшої",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. «На чверть довша» означає додати ще 1/4 коротшої сторони."
+            },
+            {
+              "id": "b",
+              "cs": "delší = kratší - 1/4",
+              "uk": "довша = коротша - 1/4",
+              "isCorrect": false,
+              "errorTag": "misreads_shorter_by_fraction",
+              "feedbackUk": "Тут переплутано збільшення з відніманням."
+            },
+            {
+              "id": "c",
+              "cs": "delší = 4 × kratší",
+              "uk": "довша = 4 × коротша",
+              "isCorrect": false,
+              "errorTag": "misreads_shorter_by_fraction",
+              "feedbackUk": "«На чверть довша» не означає «в 4 рази більша»."
+            },
+            {
+              "id": "d",
+              "cs": "delší = 3/4 kratší",
+              "uk": "довша = 3/4 коротшої",
+              "isCorrect": false,
+              "errorTag": "misreads_shorter_by_fraction",
+              "feedbackUk": "3/4 коротшої було б навпаки коротше, а не довше."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Почни з однієї коротшої сторони як з цілого."
+            },
+            {
+              "level": 2,
+              "uk": "До неї додається ще одна чверть цієї ж довжини."
+            },
+            {
+              "level": 3,
+              "uk": "Отже маємо 1 + 1/4 = 5/4 коротшої сторони."
+            }
+          ],
+          "skillTags": ["perimeter_from_equal_spacing", "counting_points_on_perimeter"],
+          "errorTags": ["misreads_shorter_by_fraction", "point_interval_cycle_confusion"],
+          "takeawayUk": "Фрази про «на частку довший/коротший» спочатку переведи у відношення, а не в довільне число."
+        }
+      ]
+    },
+    {
+      "id": "tutorial-a-task-9",
+      "taskNumber": 9,
+      "titleCs": "Konstrukce osy úhlu",
+      "titleUk": "Побудова бісектриси",
+      "examStyleGroup": "construction",
+      "difficulty": 2,
+      "available": true,
+      "skills": ["construction_angle_bisector"],
+      "errorTags": ["construction_property_confusion"],
+      "intro": {
+        "typeLabelUk": "Це задача на побудову.",
+        "whyUk": "Тут важливо не «намалювати щось схоже», а вибрати правильну послідовність кроків за властивостями фігури.",
+        "tipUk": "Спочатку визнач, який саме кут ділимо навпіл, а потім думай про властивості прямокутника."
+      },
+      "promptSegments": [
+        {
+          "id": "t9-s1",
+          "cs": "Jsou dány dvě přímky, které vytvářejí menší a větší úhel.",
+          "uk": "Дано дві прямі, які утворюють менший і більший кут."
+        },
+        {
+          "id": "t9-s2",
+          "cs": "Máte sestrojit osu většího úhlu a potom obdélník, jehož vrcholy leží na zadaných přímkách.",
+          "uk": "Треба побудувати бісектрису більшого кута, а потім прямокутник, вершини якого лежать на заданих прямих."
+        },
+        {
+          "id": "t9-s3",
+          "cs": "Bod R má ležet uvnitř strany MN.",
+          "uk": "Точка R має лежати всередині сторони MN."
+        }
+      ],
+      "fullTranslationUk": "Спочатку треба правильно вибрати саме більший кут між двома прямими й поділити його навпіл. Потім при побудові прямокутника слід використати не «вигляд», а властивості: сусідні сторони перпендикулярні, протилежні паралельні, а точка R задає положення сторони MN.",
+      "finalSummaryUk": "Побудова - це послідовність логічних геометричних властивостей, а не вгадування малюнка.",
+      "diagramSvg": "<svg viewBox='0 0 290 190' xmlns='http://www.w3.org/2000/svg'><line x1='28' y1='150' x2='260' y2='50' stroke='#52748a' stroke-width='3'/><line x1='60' y1='20' x2='210' y2='165' stroke='#9b5a29' stroke-width='3'/><circle cx='145' cy='100' r='4' fill='#1f2a24'/><circle cx='190' cy='124' r='4' fill='#8a3b32'/><text x='197' y='128' font-size='12' fill='#8a3b32'>R</text><path d='M145 100 L205 88' stroke='#2f6b52' stroke-width='2' stroke-dasharray='5 4'/><text x='126' y='92' font-size='12' fill='#5e6a61'>vetsi uhel</text></svg>",
+      "steps": [
+        {
+          "id": "tutorial-a-task-9-step-1",
+          "prompt": {
+            "cs": "Co je správný první krok konstrukce?",
+            "uk": "Який перший крок побудови правильний?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "Určit větší úhel mezi danými přímkami",
+              "uk": "Визначити більший кут між даними прямими",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Не можна ділити навпіл «якийсь» кут, спочатку треба вибрати саме більший."
+            },
+            {
+              "id": "b",
+              "cs": "Hned sestrojit obdélník přes bod R",
+              "uk": "Одразу будувати прямокутник через точку R",
+              "isCorrect": false,
+              "errorTag": "construction_property_confusion",
+              "feedbackUk": "Ще рано: перша умова стосується саме бісектриси більшого кута."
+            },
+            {
+              "id": "c",
+              "cs": "Rozdělit menší úhel na poloviny",
+              "uk": "Поділити менший кут навпіл",
+              "isCorrect": false,
+              "errorTag": "construction_property_confusion",
+              "feedbackUk": "Ні, в умові прямо вказано більший кут."
+            },
+            {
+              "id": "d",
+              "cs": "Najít střed bodu R",
+              "uk": "Знайти середину точки R",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Точка сама по собі не має середини."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Подивись, яка умова сформульована першою."
+            },
+            {
+              "level": 2,
+              "uk": "Треба будувати саме бісектрису більшого кута."
+            },
+            {
+              "level": 3,
+              "uk": "Тому спершу цей більший кут треба однозначно вибрати."
+            }
+          ],
+          "skillTags": ["construction_angle_bisector"],
+          "errorTags": ["construction_property_confusion"],
+          "takeawayUk": "У побудові порядок кроків випливає з умов, а не з бажання швидше малювати."
+        },
+        {
+          "id": "tutorial-a-task-9-step-2",
+          "prompt": {
+            "cs": "Jakou vlastnost musí mít osa většího úhlu?",
+            "uk": "Яку властивість має мати бісектриса більшого кута?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "Dělí větší úhel na dva stejné úhly",
+              "uk": "Ділить більший кут на два рівні кути",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Це і є головна властивість бісектриси."
+            },
+            {
+              "id": "b",
+              "cs": "Je kolmá na obě dané přímky",
+              "uk": "Перпендикулярна до обох даних прямих",
+              "isCorrect": false,
+              "errorTag": "construction_property_confusion",
+              "feedbackUk": "Бісектриса не обов'язково перпендикулярна до сторін кута."
+            },
+            {
+              "id": "c",
+              "cs": "Prochází bodem R",
+              "uk": "Проходить через точку R",
+              "isCorrect": false,
+              "errorTag": "construction_property_confusion",
+              "feedbackUk": "Точка R пов'язана зі стороною MN, а не з означенням бісектриси."
+            },
+            {
+              "id": "d",
+              "cs": "Protíná menší úhel v jeho středu",
+              "uk": "Перетинає менший кут у його середині",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Тут змішано інші поняття. Бісектриса ділить кут на дві рівні частини."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Згадай означення бісектриси."
+            },
+            {
+              "level": 2,
+              "uk": "Вона не вимірює довжини, а працює саме з кутом."
+            },
+            {
+              "level": 3,
+              "uk": "Бісектриса дає дві рівні частини одного й того ж кута."
+            }
+          ],
+          "skillTags": ["construction_angle_bisector"],
+          "errorTags": ["construction_property_confusion"],
+          "takeawayUk": "Коли пам'ятаєш точне означення, побудова перестає бути страшною."
+        },
+        {
+          "id": "tutorial-a-task-9-step-3",
+          "prompt": {
+            "cs": "Jak nejlépe využijeme podmínku, že bod R leží uvnitř strany MN obdélníku?",
+            "uk": "Як найкраще використати умову, що точка R лежить всередині сторони MN прямокутника?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "Strana MN musí být vedena tak, aby přes ni procházel bod R",
+              "uk": "Сторону MN треба провести так, щоб через неї проходила точка R",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Точка R задає положення саме цієї сторони, а не довільної іншої частини фігури."
+            },
+            {
+              "id": "b",
+              "cs": "Bod R musí být vrcholem obdélníku",
+              "uk": "Точка R має бути вершиною прямокутника",
+              "isCorrect": false,
+              "errorTag": "construction_property_confusion",
+              "feedbackUk": "Ні, в умові сказано, що R лежить всередині сторони, а не в її кінці."
+            },
+            {
+              "id": "c",
+              "cs": "Strana MN je libovolná a bod R ignorujeme",
+              "uk": "Сторона MN довільна, а точку R ігноруємо",
+              "isCorrect": false,
+              "errorTag": "construction_property_confusion",
+              "feedbackUk": "Саме R робить побудову однозначнішою, ігнорувати її не можна."
+            },
+            {
+              "id": "d",
+              "cs": "Bod R určuje střed obdélníku",
+              "uk": "Точка R задає центр прямокутника",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Умова про сторону MN не означає, що R є центром."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Прочитай уважно: де саме лежить R?"
+            },
+            {
+              "level": 2,
+              "uk": "Не у вершині, а всередині сторони MN."
+            },
+            {
+              "level": 3,
+              "uk": "Отже положення сторони MN має враховувати проходження через R."
+            }
+          ],
+          "skillTags": ["construction_angle_bisector", "rectangle_construction_under_constraints"],
+          "errorTags": ["construction_property_confusion"],
+          "takeawayUk": "Умови типу «точка лежить на стороні» задають геометрію фігури дуже жорстко."
+        }
+      ]
+    },
+    {
+      "id": "tutorial-a-task-10",
+      "taskNumber": 10,
+      "titleCs": "Konstrukce trojúhelníka",
+      "titleUk": "Побудова трикутника",
+      "examStyleGroup": "construction",
+      "difficulty": 3,
+      "available": true,
+      "skills": ["construction_triangle_from_altitude_and_median"],
+      "errorTags": ["construction_property_confusion"],
+      "intro": {
+        "typeLabelUk": "Це задача на побудову трикутника за властивостями.",
+        "whyUk": "Найчастіша помилка тут - переплутати висоту і медіану або забути, до якої саме сторони вони проведені.",
+        "tipUk": "Спочатку нагадай собі означення: висота перпендикулярна до сторони, медіана йде до її середини."
+      },
+      "promptSegments": [
+        {
+          "id": "t10-s1",
+          "cs": "Jsou dány body B, C a dvě přímky p a q.",
+          "uk": "Дано точки B, C і дві прямі p та q."
+        },
+        {
+          "id": "t10-s2",
+          "cs": "Přímka p určuje výšku z vrcholu C ke straně c = AB.",
+          "uk": "Пряма p задає висоту з вершини C до сторони c = AB."
+        },
+        {
+          "id": "t10-s3",
+          "cs": "Přímka q určuje těžnici z vrcholu C ke straně c = AB.",
+          "uk": "Пряма q задає медіану з вершини C до сторони c = AB."
+        }
+      ],
+      "fullTranslationUk": "У цій задачі сторона c - це AB. Висота з C до AB має бути перпендикулярна до AB, а медіана з C має йти до середини AB. Отже одна пряма задає напрям перпендикуляра до AB, а інша проходить через середину AB.",
+      "finalSummaryUk": "Якщо чітко відрізняєш висоту від медіани, побудова трикутника розкладається на зрозумілі кроки.",
+      "diagramSvg": "<svg viewBox='0 0 300 190' xmlns='http://www.w3.org/2000/svg'><circle cx='80' cy='142' r='4' fill='#1f2a24'/><circle cx='188' cy='58' r='4' fill='#1f2a24'/><text x='68' y='156' font-size='12' fill='#1f2a24'>B</text><text x='196' y='60' font-size='12' fill='#1f2a24'>C</text><line x1='40' y1='142' x2='260' y2='142' stroke='#52748a' stroke-width='3'/><line x1='188' y1='20' x2='188' y2='170' stroke='#9b5a29' stroke-width='3'/><line x1='188' y1='58' x2='126' y2='142' stroke='#2f6b52' stroke-width='3'/><text x='270' y='146' font-size='12' fill='#52748a'>AB</text><text x='194' y='20' font-size='12' fill='#9b5a29'>p</text><text x='134' y='110' font-size='12' fill='#2f6b52'>q</text></svg>",
+      "steps": [
+        {
+          "id": "tutorial-a-task-10-step-1",
+          "prompt": {
+            "cs": "Co znamená zápis, že c je strana AB?",
+            "uk": "Що означає запис, що c - це сторона AB?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "Výška i těžnice se vztahují ke straně AB",
+              "uk": "Висота і медіана стосуються сторони AB",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Саме до сторони AB треба застосовувати обидві умови."
+            },
+            {
+              "id": "b",
+              "cs": "Strana c je úsek BC",
+              "uk": "Сторона c - це відрізок BC",
+              "isCorrect": false,
+              "errorTag": "construction_property_confusion",
+              "feedbackUk": "Ні, в трикутнику ABC сторона c лежить навпроти вершини C, тобто це AB."
+            },
+            {
+              "id": "c",
+              "cs": "Výška vede z A na C",
+              "uk": "Висота йде з A на C",
+              "isCorrect": false,
+              "errorTag": "construction_property_confusion",
+              "feedbackUk": "Тут висота задана саме з вершини C до сторони AB."
+            },
+            {
+              "id": "d",
+              "cs": "Těžnice prochází bodem B a nic víc nepotřebujeme",
+              "uk": "Медіана проходить через B, і більше нічого не потрібно",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Медіана йде з вершини до середини протилежної сторони."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Згадай стандартне позначення сторін трикутника."
+            },
+            {
+              "level": 2,
+              "uk": "Сторона з малою буквою лежить навпроти однойменної великої вершини."
+            },
+            {
+              "level": 3,
+              "uk": "Отже сторона c лежить навпроти C, тобто це AB."
+            }
+          ],
+          "skillTags": ["construction_triangle_from_altitude_and_median"],
+          "errorTags": ["construction_property_confusion"],
+          "takeawayUk": "Перед побудовою обов'язково розшифруй позначення сторін."
+        },
+        {
+          "id": "tutorial-a-task-10-step-2",
+          "prompt": {
+            "cs": "Jaká je správná vlastnost výšky z C ke straně AB?",
+            "uk": "Яка правильна властивість висоти з C до сторони AB?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "Je kolmá na AB",
+              "uk": "Вона перпендикулярна до AB",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Це головна ознака висоти."
+            },
+            {
+              "id": "b",
+              "cs": "Prochází středem AB",
+              "uk": "Вона проходить через середину AB",
+              "isCorrect": false,
+              "errorTag": "construction_property_confusion",
+              "feedbackUk": "Через середину йде медіана, а не обов'язково висота."
+            },
+            {
+              "id": "c",
+              "cs": "Je rovnoběžná s AB",
+              "uk": "Вона паралельна AB",
+              "isCorrect": false,
+              "errorTag": "construction_property_confusion",
+              "feedbackUk": "Ні, висота до сторони повинна утворювати з нею прямий кут."
+            },
+            {
+              "id": "d",
+              "cs": "Vede z bodu B do bodu C",
+              "uk": "Вона йде з точки B до точки C",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Висота тут починається у вершині C."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Згадай точне означення висоти."
+            },
+            {
+              "level": 2,
+              "uk": "Висота завжди пов'язана з прямим кутом."
+            },
+            {
+              "level": 3,
+              "uk": "Отже до AB вона має бути перпендикулярною."
+            }
+          ],
+          "skillTags": ["construction_triangle_from_altitude_and_median"],
+          "errorTags": ["construction_property_confusion"],
+          "takeawayUk": "Не плутай: висота - це про перпендикуляр, медіана - про середину."
+        },
+        {
+          "id": "tutorial-a-task-10-step-3",
+          "prompt": {
+            "cs": "Jak využijeme přímku q, která určuje těžnici z C ke straně AB?",
+            "uk": "Як використати пряму q, що задає медіану з C до сторони AB?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "Určuje směr ke středu strany AB",
+              "uk": "Вона задає напрям до середини сторони AB",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Медіана з C має проходити через середину AB."
+            },
+            {
+              "id": "b",
+              "cs": "Určuje kolmici na AB",
+              "uk": "Вона задає перпендикуляр до AB",
+              "isCorrect": false,
+              "errorTag": "construction_property_confusion",
+              "feedbackUk": "Це властивість висоти, а не медіани."
+            },
+            {
+              "id": "c",
+              "cs": "Určuje délku AB",
+              "uk": "Вона задає довжину AB",
+              "isCorrect": false,
+              "errorTag": "construction_property_confusion",
+              "feedbackUk": "Пряма q задає напрям і середину, але не числову довжину сторони."
+            },
+            {
+              "id": "d",
+              "cs": "Nemá s bodem C nic společného",
+              "uk": "Вона ніяк не пов'язана з точкою C",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Медіана прямо виходить із вершини C."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Згадай, куди саме йде медіана."
+            },
+            {
+              "level": 2,
+              "uk": "Не до довільної точки сторони, а до її середини."
+            },
+            {
+              "level": 3,
+              "uk": "Отже пряма q допомагає знайти саме середину AB."
+            }
+          ],
+          "skillTags": ["construction_triangle_from_altitude_and_median"],
+          "errorTags": ["construction_property_confusion"],
+          "takeawayUk": "Коли висота і медіана задані окремо, треба тримати в голові дві різні властивості однієї сторони."
+        }
+      ]
+    },
+    {
+      "id": "tutorial-a-task-11",
+      "taskNumber": 11,
+      "titleCs": "Součet hran kvádru",
+      "titleUk": "Сума ребер паралелепіпеда",
+      "examStyleGroup": "spatial",
+      "difficulty": 2,
+      "available": true,
+      "skills": ["cuboid_edges_sum"],
+      "errorTags": ["guesses_from_diagram"],
+      "intro": {
+        "typeLabelUk": "Це задача на просторове мислення і ребра тіла.",
+        "whyUk": "Тут не треба вгадувати за картинкою. Потрібно знати, скільки ребер кожної довжини має прямокутний паралелепіпед.",
+        "tipUk": "У паралелепіпеда є по 4 ребра кожної з трьох довжин."
+      },
+      "promptSegments": [
+        {
+          "id": "t11-s1",
+          "cs": "Je dán kvádr o rozměrech 1, 2 a 3.",
+          "uk": "Дано прямокутний паралелепіпед з розмірами 1, 2 і 3."
+        },
+        {
+          "id": "t11-s2",
+          "cs": "Určete součet délek všech jeho hran.",
+          "uk": "Знайди суму довжин усіх його ребер."
+        },
+        {
+          "id": "t11-s3",
+          "cs": "Neodhadujte z obrázku, ale použijte vlastnost kvádru.",
+          "uk": "Не вгадуй по малюнку, а використай властивість паралелепіпеда."
+        }
+      ],
+      "fullTranslationUk": "У паралелепіпеда є три різні довжини ребер, і кожна з них повторюється чотири рази. Тому треба окремо порахувати внесок ребер довжини 1, довжини 2 і довжини 3, а потім усе скласти.",
+      "finalSummaryUk": "У задачах на паралелепіпед корисно пам'ятати готовий шаблон: 4a + 4b + 4c.",
+      "diagramSvg": "<svg viewBox='0 0 280 180' xmlns='http://www.w3.org/2000/svg'><polygon points='70,55 160,55 220,25 130,25' fill='#efe7d9' stroke='#7c6952' stroke-width='2'/><polygon points='70,55 70,125 160,125 160,55' fill='#f7f1e6' stroke='#7c6952' stroke-width='2'/><polygon points='160,55 220,25 220,95 160,125' fill='#e7dfd1' stroke='#7c6952' stroke-width='2'/><text x='110' y='18' font-size='12' fill='#5e6a61'>1</text><text x='48' y='95' font-size='12' fill='#5e6a61'>2</text><text x='188' y='49' font-size='12' fill='#5e6a61'>3</text></svg>",
+      "steps": [
+        {
+          "id": "tutorial-a-task-11-step-1",
+          "prompt": {
+            "cs": "Kolik hran délky 1 má kvádr?",
+            "uk": "Скільки ребер довжини 1 має паралелепіпед?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "4",
+              "uk": "4",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Кожна з трьох довжин у паралелепіпеді повторюється на чотирьох ребрах."
+            },
+            {
+              "id": "b",
+              "cs": "2",
+              "uk": "2",
+              "isCorrect": false,
+              "errorTag": "guesses_from_diagram",
+              "feedbackUk": "На рисунку може здаватися менше, але кожна довжина зустрічається чотири рази."
+            },
+            {
+              "id": "c",
+              "cs": "6",
+              "uk": "6",
+              "isCorrect": false,
+              "errorTag": "guesses_from_diagram",
+              "feedbackUk": "Шість - це кількість граней, а зараз питають саме про ребра певної довжини."
+            },
+            {
+              "id": "d",
+              "cs": "12",
+              "uk": "12",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "12 - це загальна кількість усіх ребер, не тільки довжини 1."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Пригадай загальну будову паралелепіпеда."
+            },
+            {
+              "level": 2,
+              "uk": "У нього 12 ребер, розбитих на 3 групи за довжинами."
+            },
+            {
+              "level": 3,
+              "uk": "У кожній такій групі по 4 ребра."
+            }
+          ],
+          "skillTags": ["cuboid_edges_sum"],
+          "errorTags": ["guesses_from_diagram"],
+          "takeawayUk": "У 3D-задачах краще спиратися на структуру тіла, а не на «видимі» лінії."
+        },
+        {
+          "id": "tutorial-a-task-11-step-2",
+          "prompt": {
+            "cs": "Jak zapíšeme součet délek všech hran kvádru 1 × 2 × 3?",
+            "uk": "Як записати суму довжин усіх ребер паралелепіпеда 1 × 2 × 3?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "4·1 + 4·2 + 4·3",
+              "uk": "4·1 + 4·2 + 4·3",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Це прямий спосіб скласти внесок усіх трьох груп ребер."
+            },
+            {
+              "id": "b",
+              "cs": "1 + 2 + 3",
+              "uk": "1 + 2 + 3",
+              "isCorrect": false,
+              "errorTag": "guesses_from_diagram",
+              "feedbackUk": "Так ми беремо лише по одному ребру кожної довжини."
+            },
+            {
+              "id": "c",
+              "cs": "2·(1 + 2 + 3)",
+              "uk": "2·(1 + 2 + 3)",
+              "isCorrect": false,
+              "errorTag": "guesses_from_diagram",
+              "feedbackUk": "Тут множник замалий: кожна довжина повторюється чотири рази, а не двічі."
+            },
+            {
+              "id": "d",
+              "cs": "6·(1 + 2 + 3)",
+              "uk": "6·(1 + 2 + 3)",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Шість тут узято без геометричної причини."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Збери окремо всі ребра довжини 1, 2 і 3."
+            },
+            {
+              "level": 2,
+              "uk": "Кожна довжина повторюється чотири рази."
+            },
+            {
+              "level": 3,
+              "uk": "Отже шаблон має вигляд 4a + 4b + 4c."
+            }
+          ],
+          "skillTags": ["cuboid_edges_sum"],
+          "errorTags": ["guesses_from_diagram"],
+          "takeawayUk": "Шаблон 4a + 4b + 4c економить час і прибирає хаос."
+        },
+        {
+          "id": "tutorial-a-task-11-step-3",
+          "prompt": {
+            "cs": "Jaký je číselný výsledek?",
+            "uk": "Який числовий результат?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "24",
+              "uk": "24",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. 4 + 8 + 12 = 24."
+            },
+            {
+              "id": "b",
+              "cs": "12",
+              "uk": "12",
+              "isCorrect": false,
+              "errorTag": "guesses_from_diagram",
+              "feedbackUk": "12 - це кількість усіх ребер, але не сума їх довжин."
+            },
+            {
+              "id": "c",
+              "cs": "18",
+              "uk": "18",
+              "isCorrect": false,
+              "errorTag": "guesses_from_diagram",
+              "feedbackUk": "Схоже, тут знову складено лише 1 + 2 + 3, а потім помножено не так."
+            },
+            {
+              "id": "d",
+              "cs": "36",
+              "uk": "36",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Перевір шаблон: потрібно 4·1 + 4·2 + 4·3."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Підстав числа в уже знайдений шаблон."
+            },
+            {
+              "level": 2,
+              "uk": "4·1 = 4, 4·2 = 8, 4·3 = 12."
+            },
+            {
+              "level": 3,
+              "uk": "4 + 8 + 12 = 24."
+            }
+          ],
+          "skillTags": ["cuboid_edges_sum"],
+          "errorTags": ["guesses_from_diagram"],
+          "takeawayUk": "Після правильної моделі фінальний рахунок стає коротким."
+        }
+      ]
+    },
+    {
+      "id": "tutorial-a-task-12",
+      "taskNumber": 12,
+      "titleCs": "Objem bazénu",
+      "titleUk": "Об'єм басейну",
+      "examStyleGroup": "volume_partition",
+      "difficulty": 3,
+      "available": true,
+      "skills": ["volume_partitioning", "average_height_on_linear_slope"],
+      "errorTags": ["uses_wrong_average_model"],
+      "intro": {
+        "typeLabelUk": "Це задача на об'єм складеної фігури.",
+        "whyUk": "Найкращий шлях тут - не шукати одну дивну формулу, а розбити басейн на дві зрозумілі частини.",
+        "tipUk": "Окремо порахуй частину з постійною глибиною і частину зі схилом."
+      },
+      "promptSegments": [
+        {
+          "id": "t12-s1",
+          "cs": "Bazén má délku 10 m a šířku 4 m.",
+          "uk": "Басейн має довжину 10 м і ширину 4 м."
+        },
+        {
+          "id": "t12-s2",
+          "cs": "První polovina délky má stálou hloubku 1 m.",
+          "uk": "Перша половина довжини має сталу глибину 1 м."
+        },
+        {
+          "id": "t12-s3",
+          "cs": "Druhá polovina má dno se sklonem od 1 m do 2 m.",
+          "uk": "Друга половина має похиле дно: глибина змінюється від 1 м до 2 м."
+        }
+      ],
+      "fullTranslationUk": "Спершу поділи басейн на дві половини за довжиною. Перша частина - звичайний прямокутний блок об'єму. У другій частині глибина змінюється лінійно, тому зручно взяти середню глибину 1,5 м і теж порахувати об'єм як прямокутного блока з цією середньою висотою.",
+      "finalSummaryUk": "Складну об'ємну фігуру часто легше розв'язати як суму двох простіших об'ємів.",
+      "diagramSvg": "<svg viewBox='0 0 300 180' xmlns='http://www.w3.org/2000/svg'><rect x='30' y='40' width='240' height='80' rx='8' fill='#cfe2ee' stroke='#52748a' stroke-width='2'/><line x1='150' y1='40' x2='150' y2='120' stroke='#7c6952' stroke-dasharray='5 4' stroke-width='2'/><line x1='30' y1='120' x2='150' y2='120' stroke='#9b5a29' stroke-width='3'/><line x1='150' y1='120' x2='270' y2='95' stroke='#9b5a29' stroke-width='3'/><text x='88' y='33' font-size='12' fill='#5e6a61'>5 m</text><text x='208' y='33' font-size='12' fill='#5e6a61'>5 m</text><text x='12' y='86' font-size='12' fill='#5e6a61'>1 m</text><text x='276' y='100' font-size='12' fill='#5e6a61'>2 m</text><text x='140' y='145' font-size='12' fill='#5e6a61'>sirka 4 m</text></svg>",
+      "steps": [
+        {
+          "id": "tutorial-a-task-12-step-1",
+          "prompt": {
+            "cs": "Jak je nejvýhodnější začít?",
+            "uk": "Як найзручніше почати?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "Rozdělit bazén na dvě části podle délky",
+              "uk": "Поділити басейн на дві частини за довжиною",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Саме так задача стає простою: одна частина має сталу глибину, інша - змінну."
+            },
+            {
+              "id": "b",
+              "cs": "Vzít hloubku 2 m pro celý bazén",
+              "uk": "Взяти глибину 2 м для всього басейну",
+              "isCorrect": false,
+              "errorTag": "uses_wrong_average_model",
+              "feedbackUk": "Ні, 2 м є лише на одному кінці другої половини."
+            },
+            {
+              "id": "c",
+              "cs": "Sečíst hloubky 1 m a 2 m a tím skončit",
+              "uk": "Додати глибини 1 м і 2 м і на цьому зупинитися",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Одних глибин недостатньо: потрібен саме об'єм."
+            },
+            {
+              "id": "d",
+              "cs": "Počítat celý bazén jako jednu krychli",
+              "uk": "Рахувати весь басейн як один куб",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Фігура не є кубом, і глибина в ній не однакова всюди."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Подумай, чи однакова глибина в усьому басейні."
+            },
+            {
+              "level": 2,
+              "uk": "Ні: одна половина рівна, друга похила."
+            },
+            {
+              "level": 3,
+              "uk": "Тому найзручніше поділити фігуру на дві частини."
+            }
+          ],
+          "skillTags": ["volume_partitioning"],
+          "errorTags": ["uses_wrong_average_model"],
+          "takeawayUk": "Коли форма складна, спочатку шукай природний поділ на простіші частини."
+        },
+        {
+          "id": "tutorial-a-task-12-step-2",
+          "prompt": {
+            "cs": "Jaký je objem první poloviny bazénu se stálou hloubkou 1 m?",
+            "uk": "Який об'єм першої половини басейну зі сталою глибиною 1 м?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "20 m³",
+              "uk": "20 м³",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. 5 × 4 × 1 = 20 м³."
+            },
+            {
+              "id": "b",
+              "cs": "40 m³",
+              "uk": "40 м³",
+              "isCorrect": false,
+              "errorTag": "uses_wrong_average_model",
+              "feedbackUk": "40 м³ вийшло б для всієї довжини 10 м, але тут беремо лише половину."
+            },
+            {
+              "id": "c",
+              "cs": "9 m³",
+              "uk": "9 м³",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Перевір множення: у формулі об'єму мають брати участь усі три розміри."
+            },
+            {
+              "id": "d",
+              "cs": "10 m³",
+              "uk": "10 м³",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Тут загублено ширину 4 м."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Перша половина має довжину 5 м."
+            },
+            {
+              "level": 2,
+              "uk": "Ширина 4 м, глибина 1 м."
+            },
+            {
+              "level": 3,
+              "uk": "5 × 4 × 1 = 20 м³."
+            }
+          ],
+          "skillTags": ["volume_partitioning"],
+          "errorTags": ["uses_wrong_average_model"],
+          "takeawayUk": "Для прямої частини басейну працює звичайна формула об'єму прямокутного блока."
+        },
+        {
+          "id": "tutorial-a-task-12-step-3",
+          "prompt": {
+            "cs": "Jaký je celý objem bazénu, když ve druhé polovině použijeme průměrnou hloubku 1,5 m?",
+            "uk": "Який повний об'єм басейну, якщо в другій половині взяти середню глибину 1,5 м?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "50 m³",
+              "uk": "50 м³",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Друга половина має об'єм 5 × 4 × 1,5 = 30 м³, а разом 20 + 30 = 50 м³."
+            },
+            {
+              "id": "b",
+              "cs": "60 m³",
+              "uk": "60 м³",
+              "isCorrect": false,
+              "errorTag": "uses_wrong_average_model",
+              "feedbackUk": "60 м³ вийшло б, якби взяти глибину 2 м на всю другу половину."
+            },
+            {
+              "id": "c",
+              "cs": "35 m³",
+              "uk": "35 м³",
+              "isCorrect": false,
+              "errorTag": "uses_wrong_average_model",
+              "feedbackUk": "Тут друга частина недооцінена: її середня глибина 1,5 м, а не 0,75 м."
+            },
+            {
+              "id": "d",
+              "cs": "45 m³",
+              "uk": "45 м³",
+              "isCorrect": false,
+              "errorTag": "uses_wrong_average_model",
+              "feedbackUk": "Схоже, тут десь загублено 5 м³ у другій половині."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "У другій половині глибина змінюється від 1 до 2 м."
+            },
+            {
+              "level": 2,
+              "uk": "Середня глибина для лінійної зміни дорівнює 1,5 м."
+            },
+            {
+              "level": 3,
+              "uk": "5 × 4 × 1,5 = 30 м³, а разом із першою частиною це 50 м³."
+            }
+          ],
+          "skillTags": ["volume_partitioning", "average_height_on_linear_slope"],
+          "errorTags": ["uses_wrong_average_model"],
+          "takeawayUk": "Якщо глибина змінюється рівномірно, середня висота часто дає найпростіший шлях."
+        }
+      ]
+    },
+    {
+      "id": "tutorial-a-task-13",
+      "taskNumber": 13,
+      "titleCs": "Přihlášky do tábora",
+      "titleUk": "Заявки до табору",
+      "examStyleGroup": "word_problem_percent",
+      "difficulty": 3,
+      "available": true,
+      "skills": ["word_problem_equal_bases_with_percent_excess"],
+      "errorTags": ["wrong_percent_reference_group"],
+      "intro": {
+        "typeLabelUk": "Це текстова задача на відсотки і спільну базу.",
+        "whyUk": "Найголовніше тут - побачити, що в обох змінах однакова кількість місць, отже обидві кількості заявок треба виражати через одну базу.",
+        "tipUk": "Познач кількість місць через x і окремо запиши заявки в кожній зміні."
+      },
+      "promptSegments": [
+        {
+          "id": "t13-s1",
+          "cs": "V obou termínech tábora je stejný počet míst.",
+          "uk": "В обох змінах табору однакова кількість місць."
+        },
+        {
+          "id": "t13-s2",
+          "cs": "V prvním termínu bylo přihlášek o jednu pětinu více než míst, ve druhém o 30 % více než míst.",
+          "uk": "У першій зміні заявок було на одну п'яту більше за кількість місць, у другій - на 30 % більше."
+        },
+        {
+          "id": "t13-s3",
+          "cs": "Celkem přišlo 375 přihlášek. Určete počet odmítnutých přihlášek.",
+          "uk": "Усього надійшло 375 заявок. Знайди кількість відхилених заявок."
+        }
+      ],
+      "fullTranslationUk": "Ключ тут - однакова база. Якщо в одній зміні x місць, то в першій заявок 1,2x, а в другій 1,3x. Їхня сума дорівнює 375. Після знаходження x треба порахувати перевищення над кількістю місць у кожній зміні й скласти ці перевищення.",
+      "finalSummaryUk": "Коли база однакова, обидві величини треба виражати через одну змінну, а не через різні здогадки.",
+      "steps": [
+        {
+          "id": "tutorial-a-task-13-step-1",
+          "prompt": {
+            "cs": "Co je nejvýhodnější označit písmenem x?",
+            "uk": "Що найзручніше позначити буквою x?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "Počet míst v jednom termínu",
+              "uk": "Кількість місць в одній зміні",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Саме це є спільною базою для обох відсоткових умов."
+            },
+            {
+              "id": "b",
+              "cs": "Celkový počet přihlášek",
+              "uk": "Загальну кількість заявок",
+              "isCorrect": false,
+              "errorTag": "wrong_percent_reference_group",
+              "feedbackUk": "375 уже відоме, тому це не найзручніша невідома."
+            },
+            {
+              "id": "c",
+              "cs": "Počet odmítnutých přihlášek",
+              "uk": "Кількість відхилених заявок",
+              "isCorrect": false,
+              "errorTag": "wrong_percent_reference_group",
+              "feedbackUk": "Це фінальний результат, але відсоткові умови не задані прямо через нього."
+            },
+            {
+              "id": "d",
+              "cs": "Počet míst v obou termínech dohromady",
+              "uk": "Кількість місць в обох змінах разом",
+              "isCorrect": false,
+              "errorTag": "wrong_percent_reference_group",
+              "feedbackUk": "Так теж можна, але тоді запис відсотків стане менш зручним."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Подумай, яка база однакова в обох змінах."
+            },
+            {
+              "level": 2,
+              "uk": "В обох змінах однакова саме кількість місць."
+            },
+            {
+              "level": 3,
+              "uk": "Тому x = кількість місць в одній зміні."
+            }
+          ],
+          "skillTags": ["word_problem_equal_bases_with_percent_excess"],
+          "errorTags": ["wrong_percent_reference_group"],
+          "takeawayUk": "Хороша змінна - це змінна, через яку легко записати обидві умови."
+        },
+        {
+          "id": "tutorial-a-task-13-step-2",
+          "prompt": {
+            "cs": "Jak zapíšeme počet přihlášek v obou termínech dohromady?",
+            "uk": "Як записати кількість заявок в обох змінах разом?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "1,2x + 1,3x = 375",
+              "uk": "1,2x + 1,3x = 375",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. У першій зміні 120 % від x, у другій - 130 % від x."
+            },
+            {
+              "id": "b",
+              "cs": "0,2x + 0,3x = 375",
+              "uk": "0,2x + 0,3x = 375",
+              "isCorrect": false,
+              "errorTag": "wrong_percent_reference_group",
+              "feedbackUk": "Це лише перевищення, але не самі заявки."
+            },
+            {
+              "id": "c",
+              "cs": "1,2x + 0,3x = 375",
+              "uk": "1,2x + 0,3x = 375",
+              "isCorrect": false,
+              "errorTag": "wrong_percent_reference_group",
+              "feedbackUk": "У другій зміні теж треба взяти всю кількість заявок, а не лише перевищення."
+            },
+            {
+              "id": "d",
+              "cs": "x + 0,2 + 0,3 = 375",
+              "uk": "x + 0,2 + 0,3 = 375",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Не можна додавати відсотки як окремі числа без прив'язки до бази."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "«На одну п'яту більше» означає 1 + 1/5."
+            },
+            {
+              "level": 2,
+              "uk": "Отже перша зміна це 1,2x, а друга - 1,3x."
+            },
+            {
+              "level": 3,
+              "uk": "Разом вони дають 375."
+            }
+          ],
+          "skillTags": ["word_problem_equal_bases_with_percent_excess"],
+          "errorTags": ["wrong_percent_reference_group"],
+          "takeawayUk": "Спершу запиши повні величини, а не лише їхні «надлишки»."
+        },
+        {
+          "id": "tutorial-a-task-13-step-3",
+          "prompt": {
+            "cs": "Kolik přihlášek bylo odmítnuto celkem?",
+            "uk": "Скільки заявок було відхилено загалом?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "75",
+              "uk": "75",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. 2,5x = 375, отже x = 150. Відхилено: 0,2x + 0,3x = 0,5x = 75."
+            },
+            {
+              "id": "b",
+              "cs": "150",
+              "uk": "150",
+              "isCorrect": false,
+              "errorTag": "wrong_percent_reference_group",
+              "feedbackUk": "150 - це кількість місць в одній зміні, а не число відхилених заявок."
+            },
+            {
+              "id": "c",
+              "cs": "225",
+              "uk": "225",
+              "isCorrect": false,
+              "errorTag": "wrong_percent_reference_group",
+              "feedbackUk": "225 - це кількість місць в обох змінах разом, а не перевищення."
+            },
+            {
+              "id": "d",
+              "cs": "50",
+              "uk": "50",
+              "isCorrect": false,
+              "errorTag": "wrong_percent_reference_group",
+              "feedbackUk": "Тут загублена одна з двох змін."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Спочатку знайди x з рівняння 2,5x = 375."
+            },
+            {
+              "level": 2,
+              "uk": "x = 150 місць в одній зміні."
+            },
+            {
+              "level": 3,
+              "uk": "Відхилено 0,2x + 0,3x = 30 + 45 = 75."
+            }
+          ],
+          "skillTags": ["word_problem_equal_bases_with_percent_excess"],
+          "errorTags": ["wrong_percent_reference_group"],
+          "takeawayUk": "Після знаходження бази не забудь повернутися до того, що питають у відповіді."
+        }
+      ]
+    },
+    {
+      "id": "tutorial-a-task-14",
+      "taskNumber": 14,
+      "titleCs": "Průměr známek",
+      "titleUk": "Середній бал",
+      "examStyleGroup": "average_equation",
+      "difficulty": 2,
+      "available": true,
+      "skills": ["average_grade_equation"],
+      "errorTags": ["uses_wrong_average_model"],
+      "intro": {
+        "typeLabelUk": "Це задача на середнє значення і рівняння.",
+        "whyUk": "Середнє значення не магічне: воно просто пов'язане із сумою всіх оцінок.",
+        "tipUk": "Спочатку переведи середнє 1,8 при 20 учнях у суму всіх оцінок."
+      },
+      "promptSegments": [
+        {
+          "id": "t14-s1",
+          "cs": "Ve třídě je 20 žáků. Jedniček a dvojek je stejně, další známky jsou jen trojky.",
+          "uk": "У класі 20 учнів. Одиниць і двійок порівну, інші оцінки - лише трійки."
+        },
+        {
+          "id": "t14-s2",
+          "cs": "Průměrná známka je 1,8.",
+          "uk": "Середній бал дорівнює 1,8."
+        },
+        {
+          "id": "t14-s3",
+          "cs": "Určete počet jedniček.",
+          "uk": "Знайди кількість одиниць."
+        }
+      ],
+      "fullTranslationUk": "Спершу знайди суму всіх оцінок: середнє помнож на кількість учнів. Потім познач число одиниць через x, двійок теж буде x, а трійок - 20 - 2x. Далі склади суму оцінок через x і прирівняй до вже знайденої загальної суми.",
+      "finalSummaryUk": "У задачах на середнє значення майже завжди найзручніше перейти від середнього до суми.",
+      "steps": [
+        {
+          "id": "tutorial-a-task-14-step-1",
+          "prompt": {
+            "cs": "Jaká je celková suma známek ve třídě?",
+            "uk": "Яка загальна сума оцінок у класі?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "36",
+              "uk": "36",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. 1,8 × 20 = 36."
+            },
+            {
+              "id": "b",
+              "cs": "21,8",
+              "uk": "21,8",
+              "isCorrect": false,
+              "errorTag": "uses_wrong_average_model",
+              "feedbackUk": "Середнє не додають до кількості учнів, а множать на неї."
+            },
+            {
+              "id": "c",
+              "cs": "18",
+              "uk": "18",
+              "isCorrect": false,
+              "errorTag": "uses_wrong_average_model",
+              "feedbackUk": "Тут загублено множник 20 або помилково поділено навпіл."
+            },
+            {
+              "id": "d",
+              "cs": "1,8",
+              "uk": "1,8",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "1,8 - це середнє, а не сума всіх оцінок."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Середнє пов'язане із сумою через множення."
+            },
+            {
+              "level": 2,
+              "uk": "Сума = середнє × кількість учнів."
+            },
+            {
+              "level": 3,
+              "uk": "1,8 × 20 = 36."
+            }
+          ],
+          "skillTags": ["average_grade_equation"],
+          "errorTags": ["uses_wrong_average_model"],
+          "takeawayUk": "Перший крок у таких задачах - перетворити середнє на повну суму."
+        },
+        {
+          "id": "tutorial-a-task-14-step-2",
+          "prompt": {
+            "cs": "Když počet jedniček označíme x, kolik je trojek?",
+            "uk": "Якщо кількість одиниць позначити x, скільки тоді трійок?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "20 - 2x",
+              "uk": "20 - 2x",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Одиниць x, двійок теж x, отже разом це 2x."
+            },
+            {
+              "id": "b",
+              "cs": "20 - x",
+              "uk": "20 - x",
+              "isCorrect": false,
+              "errorTag": "uses_wrong_average_model",
+              "feedbackUk": "Тут забуто, що двійок теж x."
+            },
+            {
+              "id": "c",
+              "cs": "2x",
+              "uk": "2x",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "2x - це число одиниць і двійок разом, а не число трійок."
+            },
+            {
+              "id": "d",
+              "cs": "20 - 3x",
+              "uk": "20 - 3x",
+              "isCorrect": false,
+              "errorTag": "uses_wrong_average_model",
+              "feedbackUk": "Тут без причини віднімається ще одна група."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Скільки учнів уже «зайняли» одиниці й двійки?"
+            },
+            {
+              "level": 2,
+              "uk": "Одиниць x і двійок x, тобто разом 2x."
+            },
+            {
+              "level": 3,
+              "uk": "Трійок лишається 20 - 2x."
+            }
+          ],
+          "skillTags": ["average_grade_equation"],
+          "errorTags": ["uses_wrong_average_model"],
+          "takeawayUk": "Коли групи пов'язані між собою, зручно виражати всі кількості через одну змінну."
+        },
+        {
+          "id": "tutorial-a-task-14-step-3",
+          "prompt": {
+            "cs": "Kolik je jedniček?",
+            "uk": "Скільки тут одиниць?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "12",
+              "uk": "12",
+              "isCorrect": false,
+              "errorTag": "uses_wrong_average_model",
+              "feedbackUk": "12 не підходить: перевір підстановку в суму оцінок."
+            },
+            {
+              "id": "b",
+              "cs": "8",
+              "uk": "8",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Складаємо рівняння: 1·x + 2·x + 3·(20 - 2x) = 36. Маємо -3x + 60 = 36, звідси x = 8."
+            },
+            {
+              "id": "c",
+              "cs": "6",
+              "uk": "6",
+              "isCorrect": false,
+              "errorTag": "uses_wrong_average_model",
+              "feedbackUk": "Тут рівняння розв'язано неточно."
+            },
+            {
+              "id": "d",
+              "cs": "10",
+              "uk": "10",
+              "isCorrect": false,
+              "errorTag": "uses_wrong_average_model",
+              "feedbackUk": "Перевір підстановку в суму оцінок."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Склади суму оцінок через x."
+            },
+            {
+              "level": 2,
+              "uk": "1·x + 2·x + 3·(20 - 2x) = 36."
+            },
+            {
+              "level": 3,
+              "uk": "Після спрощення маємо -3x + 60 = 36, отже x = 8."
+            }
+          ],
+          "skillTags": ["average_grade_equation"],
+          "errorTags": ["uses_wrong_average_model"],
+          "takeawayUk": "Після переходу до суми задача на середнє перетворюється на звичайне рівняння."
+        }
+      ]
+    },
+    {
+      "id": "tutorial-a-task-15",
+      "taskNumber": 15,
+      "titleCs": "Krátké úlohy na procenta",
+      "titleUk": "Короткі задачі на відсотки",
+      "examStyleGroup": "percent_logic",
+      "difficulty": 3,
+      "available": true,
+      "skills": ["percent_from_count", "team_composition_logic", "relative_increase_decrease"],
+      "errorTags": ["wrong_percent_reference_group", "relative_change_confusion"],
+      "intro": {
+        "typeLabelUk": "Це короткі задачі на відсотки і склад груп.",
+        "whyUk": "Ключове питання тут не «скільки», а «від чого саме беремо відсоток».",
+        "tipUk": "Щоразу спочатку знайди базову групу, а вже потім переходь до відсотка."
+      },
+      "promptSegments": [
+        {
+          "id": "t15-s1",
+          "cs": "V turnaji je 18 hráčů a 6 organizátorů.",
+          "uk": "На турнірі є 18 гравців і 6 організаторів."
+        },
+        {
+          "id": "t15-s2",
+          "cs": "Kolik procent všech přítomných tvoří organizátoři?",
+          "uk": "Скільки відсотків усіх присутніх становлять організатори?"
+        },
+        {
+          "id": "t15-s3",
+          "cs": "V jiné části úlohy je počet skokanů o 50 % větší než počet oštěpařů.",
+          "uk": "В іншій частині задачі кількість стрибунів на 50 % більша за кількість метальників списа."
+        }
+      ],
+      "fullTranslationUk": "Тут важливо не плутати базу відсотка. Якщо питають частку організаторів серед усіх присутніх, базою є всі присутні, а не лише гравці. У задачах на «на 50 % більше» або «на 40 % менше» теж треба перетворювати текст у множник від базової кількості.",
+      "finalSummaryUk": "У відсотках головне - правильно вибрати базу і не плутати «на x % більше» з «дорівнює x %».",
+      "steps": [
+        {
+          "id": "tutorial-a-task-15-step-1",
+          "prompt": {
+            "cs": "Kolik je všech přítomných dohromady?",
+            "uk": "Скільки всіх присутніх разом?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "24",
+              "uk": "24",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. 18 гравців + 6 організаторів = 24."
+            },
+            {
+              "id": "b",
+              "cs": "18",
+              "uk": "18",
+              "isCorrect": false,
+              "errorTag": "wrong_percent_reference_group",
+              "feedbackUk": "18 - це тільки гравці, а питають про всіх присутніх."
+            },
+            {
+              "id": "c",
+              "cs": "12",
+              "uk": "12",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Тут без причини частину людей загублено."
+            },
+            {
+              "id": "d",
+              "cs": "30",
+              "uk": "30",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Тут з'явилися зайві люди."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "База відсотка - це всі присутні."
+            },
+            {
+              "level": 2,
+              "uk": "Отже треба скласти гравців і організаторів."
+            },
+            {
+              "level": 3,
+              "uk": "18 + 6 = 24."
+            }
+          ],
+          "skillTags": ["percent_from_count"],
+          "errorTags": ["wrong_percent_reference_group"],
+          "takeawayUk": "Перед відсотком спершу визнач, хто входить до повної групи."
+        },
+        {
+          "id": "tutorial-a-task-15-step-2",
+          "prompt": {
+            "cs": "Kolik procent všech přítomných tvoří organizátoři?",
+            "uk": "Який відсоток усіх присутніх становлять організатори?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "25 %",
+              "uk": "25 %",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. 6 з 24 - це одна чверть, тобто 25 %."
+            },
+            {
+              "id": "b",
+              "cs": "33 1/3 %",
+              "uk": "33 1/3 %",
+              "isCorrect": false,
+              "errorTag": "wrong_percent_reference_group",
+              "feedbackUk": "Це вийшло б, якби поділити 6 на 18, тобто взяти неправильну базу."
+            },
+            {
+              "id": "c",
+              "cs": "6 %",
+              "uk": "6 %",
+              "isCorrect": false,
+              "errorTag": "wrong_percent_reference_group",
+              "feedbackUk": "6 - це кількість організаторів, а не відсоток."
+            },
+            {
+              "id": "d",
+              "cs": "75 %",
+              "uk": "75 %",
+              "isCorrect": false,
+              "errorTag": "wrong_percent_reference_group",
+              "feedbackUk": "75 % - це частка гравців, а не організаторів."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Організаторів 6 із загальних 24."
+            },
+            {
+              "level": 2,
+              "uk": "6/24 = 1/4."
+            },
+            {
+              "level": 3,
+              "uk": "Одна чверть - це 25 %."
+            }
+          ],
+          "skillTags": ["percent_from_count"],
+          "errorTags": ["wrong_percent_reference_group"],
+          "takeawayUk": "Неправильна база відсотка дає красиве, але хибне число."
+        },
+        {
+          "id": "tutorial-a-task-15-step-3",
+          "prompt": {
+            "cs": "Když je skokanů o 50 % více než oštěpařů a oštěpařů je 12, kolik je skokanů?",
+            "uk": "Якщо стрибунів на 50 % більше, ніж метальників списа, а метальників 12, скільки стрибунів?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "18",
+              "uk": "18",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. 50 % від 12 - це 6, тому 12 + 6 = 18."
+            },
+            {
+              "id": "b",
+              "cs": "24",
+              "uk": "24",
+              "isCorrect": false,
+              "errorTag": "relative_change_confusion",
+              "feedbackUk": "24 вийшло б, якби помилково подвоїти кількість замість збільшення на 50 %."
+            },
+            {
+              "id": "c",
+              "cs": "6",
+              "uk": "6",
+              "isCorrect": false,
+              "errorTag": "relative_change_confusion",
+              "feedbackUk": "6 - це тільки приріст, а не вся нова кількість."
+            },
+            {
+              "id": "d",
+              "cs": "14",
+              "uk": "14",
+              "isCorrect": false,
+              "errorTag": "relative_change_confusion",
+              "feedbackUk": "Тут 50 % пораховано неточно."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Спочатку знайди 50 % від 12."
+            },
+            {
+              "level": 2,
+              "uk": "50 % від 12 - це 6."
+            },
+            {
+              "level": 3,
+              "uk": "Отже нова кількість: 12 + 6 = 18."
+            }
+          ],
+          "skillTags": ["relative_increase_decrease"],
+          "errorTags": ["relative_change_confusion"],
+          "takeawayUk": "«На 50 % більше» означає база + половина бази, а не довільне нове число."
+        }
+      ]
+    },
+    {
+      "id": "tutorial-a-task-16",
+      "taskNumber": 16,
+      "titleCs": "Rámeček z obdélníků",
+      "titleUk": "Рамка з прямокутників",
+      "examStyleGroup": "pattern_counting",
+      "difficulty": 3,
+      "available": true,
+      "skills": ["pattern_generalization_from_diagram", "frame_of_rectangles_counting"],
+      "errorTags": ["pattern_not_generalized", "inner_outer_side_confusion"],
+      "intro": {
+        "typeLabelUk": "Це задача на закономірність у фігурі.",
+        "whyUk": "Такі задачі майже неможливо взяти «лобом». Спочатку треба знайти правило, яке пов'язує зовнішню сторону, внутрішній квадрат і кількість елементів у рамці.",
+        "tipUk": "Не рахуй на око. Знайди, скільки прямокутників припадає на одну сторону, а потім скоригуй кути."
+      },
+      "promptSegments": [
+        {
+          "id": "t16-s1",
+          "cs": "Tmavý rámeček je složen z obdélníků 2 × 3 cm kolem bílého čtverce.",
+          "uk": "Темна рамка складена з прямокутників 2 × 3 см навколо білого квадрата."
+        },
+        {
+          "id": "t16-s2",
+          "cs": "Vnější strana rámečku má délku 18 cm.",
+          "uk": "Зовнішня сторона рамки має довжину 18 см."
+        },
+        {
+          "id": "t16-s3",
+          "cs": "Určete počet obdélníků bez dvojího započítání rohů.",
+          "uk": "Знайди кількість прямокутників без подвійного підрахунку кутів."
+        }
+      ],
+      "fullTranslationUk": "У цій задачі треба перейти від малюнка до правила. Спочатку з'ясуй, скільки прямокутників уздовж однієї сторони поміщається при зовнішній довжині 18 см. Потім не забудь, що кутові прямокутники належать одразу двом сторонам, тому їх не можна рахувати двічі.",
+      "finalSummaryUk": "У задачах на візерунки спочатку треба знайти правило, а вже потім рахувати конкретні числа.",
+      "diagramSvg": "<svg viewBox='0 0 260 200' xmlns='http://www.w3.org/2000/svg'><rect x='30' y='20' width='160' height='160' fill='#d7cab5'/><rect x='66' y='56' width='88' height='88' fill='#fffdf7'/><line x1='30' y1='20' x2='190' y2='20' stroke='#7c6952' stroke-width='2'/><line x1='30' y1='20' x2='30' y2='180' stroke='#7c6952' stroke-width='2'/><text x='110' y='13' text-anchor='middle' font-size='12' fill='#5e6a61'>18 cm</text><text x='208' y='102' font-size='12' fill='#5e6a61'>2×3 cm</text></svg>",
+      "steps": [
+        {
+          "id": "tutorial-a-task-16-step-1",
+          "prompt": {
+            "cs": "Kolik obdélníků délky 3 cm se vejde podél jedné vnější strany délky 18 cm?",
+            "uk": "Скільки прямокутників довжиною 3 см поміститься вздовж однієї зовнішньої сторони довжини 18 см?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "6",
+              "uk": "6",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. 18 ÷ 3 = 6."
+            },
+            {
+              "id": "b",
+              "cs": "9",
+              "uk": "9",
+              "isCorrect": false,
+              "errorTag": "pattern_not_generalized",
+              "feedbackUk": "9 вийшло б при поділі на 2, але вздовж сторони тут працює довжина 3 см."
+            },
+            {
+              "id": "c",
+              "cs": "3",
+              "uk": "3",
+              "isCorrect": false,
+              "errorTag": "pattern_not_generalized",
+              "feedbackUk": "Поділ виконано в неправильному напрямі."
+            },
+            {
+              "id": "d",
+              "cs": "18",
+              "uk": "18",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "18 - це сантиметри, а не кількість елементів."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Почни з однієї сторони рамки."
+            },
+            {
+              "level": 2,
+              "uk": "Одна сторона має 18 см, один елемент уздовж неї - 3 см."
+            },
+            {
+              "level": 3,
+              "uk": "18 ÷ 3 = 6 елементів."
+            }
+          ],
+          "skillTags": ["pattern_generalization_from_diagram", "frame_of_rectangles_counting"],
+          "errorTags": ["pattern_not_generalized"],
+          "takeawayUk": "Не весь візерунок одразу: спочатку зрозумій одну сторону."
+        },
+        {
+          "id": "tutorial-a-task-16-step-2",
+          "prompt": {
+            "cs": "Jak započítáme všechny čtyři strany bez dvojího započítání rohů?",
+            "uk": "Як порахувати всі чотири сторони без подвійного підрахунку кутів?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "4·6 - 4",
+              "uk": "4·6 - 4",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. Якщо просто взяти 4 сторони по 6, кутові елементи порахуються двічі, тому віднімаємо 4."
+            },
+            {
+              "id": "b",
+              "cs": "4·6",
+              "uk": "4·6",
+              "isCorrect": false,
+              "errorTag": "inner_outer_side_confusion",
+              "feedbackUk": "Так кути рахуються двічі."
+            },
+            {
+              "id": "c",
+              "cs": "6 + 6 + 6 + 6 + 4",
+              "uk": "6 + 6 + 6 + 6 + 4",
+              "isCorrect": false,
+              "errorTag": "inner_outer_side_confusion",
+              "feedbackUk": "Навпаки, кути тут треба не додавати, а скоригувати вниз."
+            },
+            {
+              "id": "d",
+              "cs": "2·6 - 4",
+              "uk": "2·6 - 4",
+              "isCorrect": false,
+              "errorTag": "pattern_not_generalized",
+              "feedbackUk": "Тут ураховано не всі чотири сторони рамки."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "Уяви, що ти рахуєш кожну сторону окремо."
+            },
+            {
+              "level": 2,
+              "uk": "Кожен кут належить одразу двом сторонам."
+            },
+            {
+              "level": 3,
+              "uk": "Тому після 4·6 треба відняти 4 кутові повтори."
+            }
+          ],
+          "skillTags": ["frame_of_rectangles_counting", "pattern_generalization_from_diagram"],
+          "errorTags": ["inner_outer_side_confusion", "pattern_not_generalized"],
+          "takeawayUk": "У рамках кутові елементи майже завжди потребують окремої поправки."
+        },
+        {
+          "id": "tutorial-a-task-16-step-3",
+          "prompt": {
+            "cs": "Kolik obdélníků má celý tmavý rámeček?",
+            "uk": "Скільки прямокутників має вся темна рамка?"
+          },
+          "options": [
+            {
+              "id": "a",
+              "cs": "20",
+              "uk": "20",
+              "isCorrect": true,
+              "errorTag": null,
+              "feedbackUk": "Так. 4·6 - 4 = 20."
+            },
+            {
+              "id": "b",
+              "cs": "24",
+              "uk": "24",
+              "isCorrect": false,
+              "errorTag": "inner_outer_side_confusion",
+              "feedbackUk": "24 вийшло б без поправки на кутові елементи."
+            },
+            {
+              "id": "c",
+              "cs": "16",
+              "uk": "16",
+              "isCorrect": false,
+              "errorTag": "pattern_not_generalized",
+              "feedbackUk": "Тут забрано забагато елементів."
+            },
+            {
+              "id": "d",
+              "cs": "12",
+              "uk": "12",
+              "isCorrect": false,
+              "errorTag": "clearly_wrong",
+              "feedbackUk": "Перевір логіку рахунку по сторонах."
+            }
+          ],
+          "hintLevels": [
+            {
+              "level": 1,
+              "uk": "У тебе вже є формула для всієї рамки."
+            },
+            {
+              "level": 2,
+              "uk": "Підстав 6 елементів на сторону."
+            },
+            {
+              "level": 3,
+              "uk": "4·6 - 4 = 20."
+            }
+          ],
+          "skillTags": ["pattern_generalization_from_diagram", "frame_of_rectangles_counting"],
+          "errorTags": ["inner_outer_side_confusion", "pattern_not_generalized"],
+          "takeawayUk": "Правило для однієї сторони плюс корекція кутів дає всю рамку."
+        }
+      ]
+    }
+  ]
+}

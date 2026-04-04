@@ -1,0 +1,19 @@
+---
+import ReviewPlayer from "@/components/ReviewPlayer";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getReviewPool, getTutorials } from "@/lib/content";
+
+const tutorials = getTutorials();
+const reviewPool = getReviewPool();
+---
+
+<BaseLayout title="Mistake Review">
+  <section class="hero">
+    <h1>Mistake Review</h1>
+    <p>
+      After a completed tutorial seed flow, the app selects 5–8 short review tasks from weak
+      skills and common error tags. This first MVP ships a small prototype pool.
+    </p>
+  </section>
+  <ReviewPlayer client:load tutorials={tutorials} reviewPool={reviewPool} />
+</BaseLayout>

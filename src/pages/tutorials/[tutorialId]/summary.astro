@@ -1,0 +1,23 @@
+---
+import SummaryPanel from "@/components/SummaryPanel";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getTutorialById } from "@/lib/content";
+
+const tutorialId = Astro.params.tutorialId ?? "";
+const tutorial = getTutorialById(tutorialId);
+
+if (!tutorial) {
+  return Astro.redirect("/tutorials");
+}
+---
+
+<BaseLayout title={`${tutorial.title} Summary`}>
+  <section class="hero">
+    <h1>{tutorial.title} Summary</h1>
+    <p>
+      This screen reads stored progress, highlights weak skills and error tags, and points the
+      student toward the mistake-review flow.
+    </p>
+  </section>
+  <SummaryPanel client:load tutorial={tutorial} />
+</BaseLayout>

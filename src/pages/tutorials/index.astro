@@ -1,0 +1,54 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getTutorials } from "@/lib/content";
+
+const tutorials = getTutorials();
+---
+
+<BaseLayout title="Tutorial Select">
+  <section class="hero">
+    <h1>Tutorial Select</h1>
+    <p>
+      Pick a tutorial variant. Both preserve the exam order; Tutorial A currently includes full
+      seed content for tasks 1–4, while the rest stay as data placeholders for expansion.
+    </p>
+  </section>
+
+  <section class="grid">
+    {
+      tutorials.map((tutorial) => {
+        const firstAvailableTask = tutorial.tasks.find((task) => task.available);
+        return (
+          <article class="card">
+            <div class="pill-row">
+              <span class="pill">{tutorial.title}</span>
+              <span class="pill">
+                {tutorial.seedTaskCount}/{tutorial.taskCount} seeded tasks
+              </span>
+            </div>
+            <h2>{tutorial.shortDescriptionUk}</h2>
+            <p>
+              Czech exam-facing text, Ukrainian support, guided steps, and data-driven task
+              content.
+            </p>
+            <div class="action-row">
+              {firstAvailableTask ? (
+                <a
+                  class="button"
+                  href={`/tutorials/${tutorial.id}/tasks/${firstAvailableTask.taskNumber}`}
+                >
+                  Почати
+                </a>
+              ) : (
+                <span class="button secondary">Скоро</span>
+              )}
+              <a class="button ghost" href={`/tutorials/${tutorial.id}/summary`}>
+                Підсумок
+              </a>
+            </div>
+          </article>
+        );
+      })
+    }
+  </section>
+</BaseLayout>

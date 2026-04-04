@@ -1,0 +1,50 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Cermat Tutorial"
+  description="MVP tutorial app for Czech grade 9 math entrance exam prep"
+>
+  <section class="hero">
+    <div class="pill-row">
+      <span class="pill">Exam Tutorial</span>
+      <span class="pill">Mistake Review</span>
+      <span class="pill">Czech + Ukrainian support</span>
+    </div>
+    <h1>Step-by-step exam prep, not a textbook and not a quiz bank.</h1>
+    <p>
+      This MVP follows the real exam order and teaches through tiny decisions. The student sees
+      Czech exam text, can reveal Ukrainian help locally, and gets short review tasks based on
+      actual mistakes.
+    </p>
+    <div class="action-row">
+      <a class="button" href="/tutorials">Vybrat tutorial</a>
+      <a class="button secondary" href="/review">Mistake Review</a>
+    </div>
+  </section>
+
+  <section class="grid">
+    <article class="card">
+      <h2>Main mode</h2>
+      <p>
+        Exam Tutorial keeps the real route of tasks 1–16, but the first runnable MVP seed focuses
+        on Tutorial A tasks 1–4 with guided steps and feedback.
+      </p>
+    </article>
+    <article class="card">
+      <h2>Language behavior</h2>
+      <p>
+        Task statements, step prompts, and answer options stay in Czech. Hints, feedback, and
+        summaries stay in Ukrainian. Translation is local per segment, never global.
+      </p>
+    </article>
+    <article class="card">
+      <h2>Persistence</h2>
+      <p>
+        Step attempts, hints, translation reveals, time spent, and weak-skill signals are stored
+        in browser progress now and can sync to a Cloudflare Durable Object in deployment.
+      </p>
+    </article>
+  </section>
+</BaseLayout>

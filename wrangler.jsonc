@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cermat-tutorial",
+  "main": "./dist/_worker.js/index.js",
+  "compatibility_date": "2026-04-03",
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "PROGRESS_HUB",
+        "class_name": "ProgressHub"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_classes": ["ProgressHub"]
+    }
+  ]
+}

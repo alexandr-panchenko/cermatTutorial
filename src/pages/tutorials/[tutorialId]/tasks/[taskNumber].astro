@@ -1,0 +1,18 @@
+---
+import TutorialPlayer from "@/components/TutorialPlayer";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getTutorialById, getTutorialTask } from "@/lib/content";
+
+const tutorialId = Astro.params.tutorialId ?? "";
+const taskNumber = Number(Astro.params.taskNumber ?? "0");
+const tutorial = getTutorialById(tutorialId);
+const task = tutorial ? getTutorialTask(tutorial.id, taskNumber) : undefined;
+
+if (!tutorial || !task) {
+  return Astro.redirect("/tutorials");
+}
+---
+
+<BaseLayout title={`${tutorial.title} · Task ${task.taskNumber}`}>
+  <TutorialPlayer client:load tutorial={tutorial} task={task} />
+</BaseLayout>
