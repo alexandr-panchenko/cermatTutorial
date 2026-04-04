@@ -4,11 +4,7 @@ import cloudflare from "@astrojs/cloudflare";
 
 export default defineConfig({
   adapter: cloudflare({
-    imageService: "passthrough",
-    workerEntryPoint: {
-      path: "./src/worker.ts",
-      namedExports: ["ProgressHub"]
-    }
+    imageService: "passthrough"
   }),
   integrations: [react()],
   output: "server"
