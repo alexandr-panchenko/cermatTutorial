@@ -1,10 +1,8 @@
-export class ProgressHub {
-  state: DurableObjectState;
-  storage: DurableObjectStorage;
+import { DurableObject } from "cloudflare:workers";
 
-  constructor(state: DurableObjectState) {
-    this.state = state;
-    this.storage = state.storage;
+export class ProgressHub extends DurableObject {
+  constructor(state: DurableObjectState, env: unknown) {
+    super(state, env);
   }
 
   async fetch(request: Request): Promise<Response> {
@@ -16,13 +14,13 @@ export class ProgressHub {
     }
 
     if (request.method === "GET") {
-      const stored = await this.storage.get(sessionId);
+      const stored = await this.ctx.storage.get(sessionId);
       return Response.json(stored ?? null);
     }
 
     if (request.method === "POST") {
       const body = await request.json();
-      await this.storage.put(sessionId, body);
+      await this.ctx.storage.put(sessionId, body);
       return Response.json({ ok: true });
     }
 
