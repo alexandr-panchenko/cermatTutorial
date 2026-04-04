@@ -3,12 +3,9 @@ import react from "@astrojs/react";
 import cloudflare from "@astrojs/cloudflare";
 
 export default defineConfig({
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    imageService: "passthrough"
+  }),
   integrations: [react()],
-  output: "server",
-  image: {
-    service: {
-      entrypoint: "astro/assets/services/noop"
-    }
-  }
+  output: "server"
 });
